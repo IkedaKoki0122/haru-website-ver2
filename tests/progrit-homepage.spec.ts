@@ -1,19 +1,19 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('英語習得研究所 Homepage', () => {
+test.describe('Utah Study Support Homepage', () => {
   test('should display the homepage correctly', async ({ page }) => {
     await page.goto('/');
     
-    // Check if the page title contains 英語習得研究所
-    await expect(page).toHaveTitle(/英語習得研究所/);
+    // Check if the page title contains Utah Study Support
+    await expect(page).toHaveTitle(/Utah Study Support/);
     
     // Check header elements
     await expect(page.locator('header')).toBeVisible();
-    await expect(page.getByText('英語習得研究所')).toBeVisible();
+    await expect(page.getByText('Utah Study Support')).toBeVisible();
     await expect(page.getByRole('button', { name: '無料カウンセリング' })).toBeVisible();
     
     // Check navigation menu
-    await expect(page.getByText('英語習得研究所とは')).toBeVisible();
+    await expect(page.getByText('Utah Study Supportとは')).toBeVisible();
     await expect(page.getByText('コース・料金')).toBeVisible();
     await expect(page.getByText('トピックス')).toBeVisible();
     await expect(page.getByText('利用者の声')).toBeVisible();
@@ -26,7 +26,7 @@ test.describe('英語習得研究所 Homepage', () => {
     await page.goto('/');
     
     // Check hero image
-    await expect(page.locator('img[alt="英語習得研究所 Hero"]')).toBeVisible();
+    await expect(page.locator('img[alt="Utah Study Support Hero"]')).toBeVisible();
   });
 
   test('should display 3 features section', async ({ page }) => {
@@ -84,13 +84,13 @@ test.describe('英語習得研究所 Homepage', () => {
     
     // Check footer sections
     await expect(page.locator('footer')).toBeVisible();
-    await expect(page.locator('footer').getByText('英語習得研究所')).toBeVisible();
+    await expect(page.locator('footer').getByText('Utah Study Support')).toBeVisible();
     await expect(page.getByText('サービス')).toBeVisible();
     await expect(page.getByText('会社情報')).toBeVisible();
     await expect(page.getByText('サポート')).toBeVisible();
     
     // Check copyright
-    await expect(page.getByText('© 2024 英語習得研究所. All rights reserved.')).toBeVisible();
+    await expect(page.getByText('© 2024 Utah Study Support. All rights reserved.')).toBeVisible();
   });
 
   test('should be responsive', async ({ page }) => {
@@ -99,17 +99,17 @@ test.describe('英語習得研究所 Homepage', () => {
     // Test mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
     await expect(page.locator('header')).toBeVisible();
-    await expect(page.getByText('英語習得研究所')).toBeVisible();
+    await expect(page.getByText('Utah Study Support')).toBeVisible();
     
     // Test tablet viewport
     await page.setViewportSize({ width: 768, height: 1024 });
     await expect(page.locator('header')).toBeVisible();
-    await expect(page.getByText('英語習得研究所')).toBeVisible();
+    await expect(page.getByText('Utah Study Support')).toBeVisible();
     
     // Test desktop viewport
     await page.setViewportSize({ width: 1200, height: 800 });
     await expect(page.locator('header')).toBeVisible();
-    await expect(page.getByText('英語習得研究所')).toBeVisible();
+    await expect(page.getByText('Utah Study Support')).toBeVisible();
   });
 
   test('buttons should be clickable', async ({ page }) => {

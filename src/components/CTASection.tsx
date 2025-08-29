@@ -19,7 +19,7 @@ const CTASection: FC = () => {
         >
           <Image
             src="/helo2.webp"
-            alt="英語習得研究所 Background"
+            alt="Utah Study Support Background"
             fill
             className="object-cover"
           />
@@ -45,7 +45,7 @@ const CTASection: FC = () => {
               animate={isInView ? { scale: 1 } : { scale: 0.8 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              無料カウンセリング実施中
+              あなたのユタ留学を全力でサポートします
             </motion.h2>
             
             <motion.p 
@@ -54,7 +54,7 @@ const CTASection: FC = () => {
               animate={isInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
             >
-              あなたの英語学習の課題を分析し、最適な学習プランをご提案いたします。
+              一緒に素晴らしいユタ留学の思い出を作りましょう
             </motion.p>
             
             <motion.div
@@ -63,7 +63,7 @@ const CTASection: FC = () => {
               transition={{ duration: 0.6, delay: 1.2 }}
             >
               <Link 
-                href="/counseling" 
+                href="/contact" 
                 className="inline-block bg-orange-500 text-white px-10 py-3 rounded-full hover:bg-orange-600 text-lg font-bold"
               >
                 <motion.span
@@ -71,7 +71,7 @@ const CTASection: FC = () => {
                   whileTap={{ scale: 0.95 }}
                   className="block"
                 >
-                  今すぐ申し込む
+                  お問い合わせ
                 </motion.span>
               </Link>
             </motion.div>

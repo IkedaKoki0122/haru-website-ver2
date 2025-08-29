@@ -119,7 +119,7 @@ export default function QAPage() {
                 よくある質問
               </h1>
               <p className="text-lg text-gray-600 transform transition-all duration-1000 delay-400 ease-out">
-                英語習得研究所に関してよく寄せられる質問をまとめました
+                Utah Study Supportに関してよく寄せられる質問をまとめました
               </p>
             </div>
           </div>

@@ -121,7 +121,7 @@ export default function Contact() {
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <div className="text-2xl font-bold">
-                  <span className="text-black">英語習得研究所</span>
+                  <span className="text-black">Utah Study Support</span>
                 </div>
               </div>
               <a href="/" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
@@ -293,7 +293,7 @@ export default function Contact() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="text-2xl font-bold">
-                <span className="text-black">英語習得研究所</span>
+                <span className="text-black">Utah Study Support</span>
               </div>
             </div>
             <a href="/" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
@@ -311,7 +311,7 @@ export default function Contact() {
               お問い合わせ
             </h1>
             <p className="text-lg text-gray-600 hero-subtitle">
-              英語習得研究所に関するご質問やご相談がございましたら、<br />
+              Utah Study Supportに関するご質問やご相談がございましたら、<br />
               お気軽にお問い合わせください。
             </p>
           </div>

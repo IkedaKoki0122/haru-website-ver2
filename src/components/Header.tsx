@@ -13,9 +13,8 @@ function Header({ currentPage }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigationItems = useMemo(() => [
-    { href: "/about", label: "英語習得研究所とは" },
+    { href: "/about", label: "Utah Study Supportとは" },
     { href: "/courses", label: "コース・料金" },
-    { href: "/lp", label: "ランディングページ" },
     { href: "/topics", label: "トピックス" },
     { href: "/testimonials", label: "利用者の声" },
     { href: "/schools", label: "スクールを探す" },
@@ -37,7 +36,7 @@ function Header({ currentPage }: HeaderProps) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4">
         <div className="flex items-center justify-between h-16">
           <motion.div 
             className="flex items-center"
@@ -78,7 +77,7 @@ function Header({ currentPage }: HeaderProps) {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xl font-bold text-gray-900 leading-tight tracking-tight group-hover:text-gray-700 transition-colors duration-300">
-                    英語習得研究所
+                    Utah Study Support
                   </span>
                   <span className="text-xs font-medium text-orange-500 uppercase tracking-wider">
                     English Institute
@@ -119,8 +118,10 @@ function Header({ currentPage }: HeaderProps) {
                     aria-current={active ? "page" : undefined}
                   >
                     <motion.span
+                      className="block truncate"
                       whileHover={{ y: -2 }}
                       transition={{ duration: 0.2 }}
+                      title={item.label}
                     >
                       {item.label}
                     </motion.span>
@@ -140,7 +141,7 @@ function Header({ currentPage }: HeaderProps) {
           </motion.nav>
 
           <motion.div 
-            className="flex items-center space-x-4"
+            className="flex items-center space-x-2"
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -149,7 +150,7 @@ function Header({ currentPage }: HeaderProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href="/counseling" className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 font-medium text-sm hidden lg:block transition-colors">
+              <Link href="/counseling" className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 font-medium text-sm hidden lg:block transition-colors">
                 無料カウンセリング
               </Link>
             </motion.div>
@@ -207,7 +208,7 @@ function Header({ currentPage }: HeaderProps) {
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <motion.div 
-                className="px-6 py-4 space-y-3"
+                className="px-4 py-4 space-y-3"
                 initial={{ y: -20 }}
                 animate={{ y: 0 }}
                 exit={{ y: -20 }}

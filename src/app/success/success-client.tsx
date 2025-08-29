@@ -59,7 +59,7 @@ export default function SuccessPageClient() {
           
           <p className="text-gray-600 mb-8">
             決済が正常に完了いたしました。<br />
-            英語習得研究所コースへのお申し込みを受け付けました。
+            Utah Study Supportコースへのお申し込みを受け付けました。
           </p>
 
           {session && (

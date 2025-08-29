@@ -78,7 +78,7 @@ export default function About() {
                 className="text-4xl md:text-5xl font-bold mb-6"
                 variants={itemVariants}
               >
-                英語習得研究所とは
+                Utah Study Supportとは
               </motion.h1>
               <motion.p 
                 className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto"
@@ -112,7 +112,7 @@ export default function About() {
                 className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed"
                 variants={itemVariants}
               >
-                英語習得研究所は「世界で活躍する日本人を増やす」をミッションに掲げ、
+                Utah Study Supportは「世界で活躍する日本人を増やす」をミッションに掲げ、
                 <br />
                 短期集中で英語力を確実に身につけるコーチングサービスを提供しています。
                 <br />
@@ -138,7 +138,7 @@ export default function About() {
                 className="text-3xl font-bold text-gray-900 mb-4"
                 variants={itemVariants}
               >
-                英語習得研究所の特徴
+                Utah Study Supportの特徴
               </motion.h2>
             </motion.div>
             <motion.div 
@@ -219,7 +219,7 @@ export default function About() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                英語習得研究所の学習メソッド
+                Utah Study Supportの学習メソッド
               </h2>
             </div>
             <div className="grid lg:grid-cols-2 gap-12 items-center">

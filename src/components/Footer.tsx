@@ -9,9 +9,8 @@ function Footer() {
 
   const footerLinks = useMemo(() => ({
     service: [
-      { href: "/about", label: "英語習得研究所とは" },
+      { href: "/about", label: "Utah Study Supportとは" },
       { href: "/courses", label: "コース・料金" },
-      { href: "/lp", label: "ランディングページ" },
       { href: "/schools", label: "スクールを探す" },
       { href: "/testimonials", label: "利用者の声" },
     ],
@@ -86,7 +85,7 @@ function Footer() {
               transition={{ duration: 0.3 }}
             >
               <Link href="/" className="text-2xl font-bold mb-4 block">
-                英語習得研究所
+                Utah Study Support
               </Link>
             </motion.div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -170,7 +169,7 @@ function Footer() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="text-gray-400 text-sm">
-            © 2024 英語習得研究所. All rights reserved.
+            © 2024 Utah Study Support. All rights reserved.
           </p>
           <motion.div 
             className="mt-4 md:mt-0"

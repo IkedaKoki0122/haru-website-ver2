@@ -13,7 +13,7 @@ export default function Terms() {
         <div className="prose prose-lg max-w-none text-gray-700">
           <h2 className="text-xl font-bold text-gray-900 mb-4 mt-8">第1条（適用）</h2>
           <p className="mb-6 leading-relaxed">
-            本利用規約（以下「本規約」といいます。）は、株式会社英語習得研究所（以下「当社」といいます。）が提供する英語コーチングサービス「英語習得研究所」（以下「本サービス」といいます。）の利用条件を定めるものです。本サービスをご利用されるお客様（以下「利用者」といいます。）には、本規約の全てについて同意していただく必要があります。
+            本利用規約（以下「本規約」といいます。）は、株式会社Utah Study Support（以下「当社」といいます。）が提供する英語コーチングサービス「Utah Study Support」（以下「本サービス」といいます。）の利用条件を定めるものです。本サービスをご利用されるお客様（以下「利用者」といいます。）には、本規約の全てについて同意していただく必要があります。
           </p>
 
           <h2 className="text-xl font-bold text-gray-900 mb-4 mt-8">第2条（利用登録）</h2>
@@ -100,7 +100,7 @@ export default function Terms() {
 
           <div className="text-right mt-12 mb-8">
             <p className="text-gray-600">制定日：2024年1月1日</p>
-            <p className="text-gray-600">株式会社英語習得研究所</p>
+            <p className="text-gray-600">株式会社Utah Study Support</p>
           </div>
         </div>
       </main>

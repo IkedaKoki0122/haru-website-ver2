@@ -89,7 +89,7 @@ export default function Schools() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           >
-            全国に展開する英語習得研究所スクールからお近くの校舎をお選びください。
+            全国に展開するUtah Study Supportスクールからお近くの校舎をお選びください。
             <br />
             どの校舎も最高品質の英語コーチングサービスを提供しています。
           </motion.p>

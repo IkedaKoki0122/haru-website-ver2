@@ -39,7 +39,7 @@ export default function Privacy() {
             >
               <h2 className="text-xl font-bold text-gray-900 mb-4">1. 基本方針</h2>
               <p className="text-gray-700 leading-relaxed">
-                株式会社英語習得研究所（以下「当社」といいます。）は、当社の提供するサービスをご利用いただくお客様の個人情報の取り扱いについて、個人情報保護法その他の関連法令を遵守し、以下のプライバシーポリシーに従って適切に取り扱います。
+                株式会社Utah Study Support（以下「当社」といいます。）は、当社の提供するサービスをご利用いただくお客様の個人情報の取り扱いについて、個人情報保護法その他の関連法令を遵守し、以下のプライバシーポリシーに従って適切に取り扱います。
               </p>
             </motion.section>
 
@@ -162,7 +162,7 @@ export default function Privacy() {
               </p>
               <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                 <p className="text-gray-700">
-                  <strong>株式会社英語習得研究所</strong><br />
+                  <strong>株式会社Utah Study Support</strong><br />
                   〒100-0005 東京都千代田区丸の内1-1-1<br />
                   お問い合わせフォーム：<Link href="/contact" className="text-blue-600 hover:text-blue-800">こちら</Link><br />
                   受付時間：平日 9:00-18:00

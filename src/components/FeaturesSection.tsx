@@ -62,7 +62,7 @@ export default function FeaturesSection() {
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            英語習得研究所が選ばれる3つの理由
+            Utah Study Supportが選ばれる3つの理由
           </h2>
         </motion.div>
         
@@ -87,17 +87,17 @@ export default function FeaturesSection() {
             >
               <Image
                 src="/icon01.svg"
-                alt="科学的カリキュラム"
+                alt="業界最安値79,800円"
                 width={64}
                 height={64}
                 className="w-full h-full"
               />
             </motion.div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">
-              科学的カリキュラム
+              業界最安値79,800円
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed">
-              応用言語学に基づいた科学的アプローチで、短期間で確実な英語力向上を実現します。
+              他社と比べて32万円以上もお得！充実したサポート内容を業界最安値でご提供します。
             </p>
           </motion.div>
           
@@ -116,17 +116,17 @@ export default function FeaturesSection() {
             >
               <Image
                 src="/icon02.svg"
-                alt="専属コンサルタント"
+                alt="トータルサポート"
                 width={64}
                 height={64}
                 className="w-full h-full"
               />
             </motion.div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">
-              専属コンサルタント
+              トータルサポート
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed">
-              英語学習のプロフェッショナルが、あなた専用のカリキュラムで学習進捗を徹底管理。
+              学校選びから現地生活まで、ユタ留学に必要なすべてのサービスをワンストップで提供します。
             </p>
           </motion.div>
           
@@ -145,17 +145,17 @@ export default function FeaturesSection() {
             >
               <Image
                 src="/icon03.svg"
-                alt="継続サポート"
+                alt="24時間LINE相談"
                 width={64}
                 height={64}
                 className="w-full h-full"
               />
             </motion.div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">
-              継続サポート
+              24時間LINE相談
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed">
-              毎日の学習管理から週次面談まで、挫折しない仕組みで学習継続をサポート。
+              留学中の疑問や困りごとにLINEで24時間対応。日本語でいつでも相談できるので安心です。
             </p>
           </motion.div>
         </motion.div>

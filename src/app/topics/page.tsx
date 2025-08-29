@@ -44,7 +44,7 @@ function Topics() {
       id: 5,
       date: "2024.07.25",
       title: "受講生インタビュー：外資系転職成功事例",
-      excerpt: "英語習得研究所で英語力を身につけ、念願の外資系企業への転職を成功させた受講生のインタビューをお届けします。",
+      excerpt: "Utah Study Supportで英語力を身につけ、念願の外資系企業への転職を成功させた受講生のインタビューをお届けします。",
       category: "受講生の声",
       image: "/news-05.jpg"
     },
@@ -98,7 +98,7 @@ function Topics() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              英語習得研究所の最新情報・お知らせをお届けします
+              Utah Study Supportの最新情報・お知らせをお届けします
             </motion.p>
           </div>
         </section>

@@ -6,7 +6,7 @@ export default async function HeroSection() {
       <div className="w-full relative">
         <Image
           src="/helo.webp"
-          alt="英語習得研究所 Hero"
+          alt="Utah Study Support Hero"
           width={1920}
           height={600}
           className="w-full h-auto block"

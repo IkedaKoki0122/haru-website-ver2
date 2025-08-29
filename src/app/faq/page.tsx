@@ -144,7 +144,7 @@ export default function FAQ() {
                 よくある質問
               </h1>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto transform transition-all duration-1000 delay-400 ease-out">
-                英語習得研究所に関してよくいただくご質問をまとめました。
+                Utah Study Supportに関してよくいただくご質問をまとめました。
                 <br />
                 こちらで解決しない場合は、お気軽にお問い合わせください。
               </p>

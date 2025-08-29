@@ -5,28 +5,28 @@ import Footer from "../../components/Footer";
 import CoursesClient from "./CoursesClient";
 
 export const metadata: Metadata = {
-  title: 'コース・料金 | 英語習得研究所 - 英語コーチング',
-  description: '英語習得研究所の各種英語コースと料金をご紹介。ビジネス英会話、TOEIC、TOEFL、初級者向けなど、あなたの目標に合わせた最適なコースをお選びください。3ヶ月の短期集中で確実な英語力向上を実現します。',
-  keywords: ['英語コース', '英語学習', 'TOEIC対策', 'ビジネス英語', '英語コーチング', '英語習得研究所', '短期集中', '英会話'],
+  title: 'コース・料金 | Utah Study Support - 英語コーチング',
+  description: 'Utah Study Supportの各種英語コースと料金をご紹介。ビジネス英会話、TOEIC、TOEFL、初級者向けなど、あなたの目標に合わせた最適なコースをお選びください。3ヶ月の短期集中で確実な英語力向上を実現します。',
+  keywords: ['英語コース', '英語学習', 'TOEIC対策', 'ビジネス英語', '英語コーチング', 'Utah Study Support', '短期集中', '英会話'],
   openGraph: {
-    title: 'コース・料金 | 英語習得研究所 - 英語コーチング',
-    description: '英語習得研究所の各種英語コースと料金をご紹介。ビジネス英会話、TOEIC、TOEFL、初級者向けなど、あなたの目標に合わせた最適なコースをお選びください。',
+    title: 'コース・料金 | Utah Study Support - 英語コーチング',
+    description: 'Utah Study Supportの各種英語コースと料金をご紹介。ビジネス英会話、TOEIC、TOEFL、初級者向けなど、あなたの目標に合わせた最適なコースをお選びください。',
     type: 'website',
     locale: 'ja_JP',
-    siteName: '英語習得研究所',
+    siteName: 'Utah Study Support',
     images: [
       {
         url: '/og-courses.jpg',
         width: 1200,
         height: 630,
-        alt: '英語習得研究所 コース・料金ページ',
+        alt: 'Utah Study Support コース・料金ページ',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'コース・料金 | 英語習得研究所 - 英語コーチング',
-    description: '英語習得研究所の各種英語コースと料金をご紹介。あなたの目標に合わせた最適なコースをお選びください。',
+    title: 'コース・料金 | Utah Study Support - 英語コーチング',
+    description: 'Utah Study Supportの各種英語コースと料金をご紹介。あなたの目標に合わせた最適なコースをお選びください。',
   },
   robots: {
     index: true,
@@ -69,7 +69,7 @@ export default function CoursesPage() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                英語習得研究所の特徴
+                Utah Study Supportの特徴
               </h2>
               <p className="text-gray-600">
                 短期集中で確実に英語力を向上させる3つのポイント

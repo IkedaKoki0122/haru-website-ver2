@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import SuccessPageClient from './success-client';
 
 export const metadata: Metadata = {
-  title: '決済完了 - 英語習得研究所',
+  title: '決済完了 - Utah Study Support',
   description: 'お申し込みありがとうございます。決済が正常に完了いたしました。',
   robots: {
     index: false,

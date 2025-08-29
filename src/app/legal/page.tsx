@@ -88,7 +88,7 @@ export default function Legal() {
                 法的情報
               </h1>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto transform transition-all duration-1000 delay-400 ease-out">
-                英語習得研究所のサービス利用に関する各種規約・方針をご確認いただけます。
+                Utah Study Supportのサービス利用に関する各種規約・方針をご確認いただけます。
                 <br />
                 ご利用前に必ずお読みください。
               </p>

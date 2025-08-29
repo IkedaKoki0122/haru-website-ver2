@@ -113,7 +113,7 @@ export default function TopicDetail() {
       category: "講師紹介",
       image: "/news-02.jpg",
       content: `
-        <p>英語習得研究所に新しい講師陣が加わりました。全員がグローバル企業での豊富な経験を持つプロフェッショナルです。</p>
+        <p>Utah Study Supportに新しい講師陣が加わりました。全員がグローバル企業での豊富な経験を持つプロフェッショナルです。</p>
         
         <h2>新講師陣のプロフィール</h2>
         
@@ -241,7 +241,7 @@ export default function TopicDetail() {
       category: "システム",
       image: "/news-04.jpg",
       content: `
-        <p>英語習得研究所のオンライン受講システムを大幅にアップデートし、より使いやすく効果的な学習環境を提供いたします。</p>
+        <p>Utah Study Supportのオンライン受講システムを大幅にアップデートし、より使いやすく効果的な学習環境を提供いたします。</p>
         
         <h2>新機能の紹介</h2>
         
@@ -284,11 +284,11 @@ export default function TopicDetail() {
       date: "2024.07.25",
       title: "受講生インタビュー：外資系転職成功事例",
       excerpt:
-        "英語習得研究所で英語力を身につけ、念願の外資系企業への転職を成功させた受講生のインタビューをお届けします。",
+        "Utah Study Supportで英語力を身につけ、念願の外資系企業への転職を成功させた受講生のインタビューをお届けします。",
       category: "受講生の声",
       image: "/news-05.jpg",
       content: `
-        <p>英語習得研究所で英語力を身につけ、念願の外資系企業への転職を成功させた受講生のインタビューをお届けします。</p>
+        <p>Utah Study Supportで英語力を身につけ、念願の外資系企業への転職を成功させた受講生のインタビューをお届けします。</p>
         
         <h2>インタビュー対象者</h2>
         <p><strong>山田太郎さん（仮名）</strong><br>
@@ -300,7 +300,7 @@ export default function TopicDetail() {
         <h2>転職のきっかけ</h2>
         <p>「海外の最新技術に触れたい、グローバルな環境で働きたいという思いが強くなりました。でも、英語力に自信がなくて、なかなか行動に移せませんでした。」</p>
         
-        <h2>英語習得研究所を選んだ理由</h2>
+        <h2>Utah Study Supportを選んだ理由</h2>
         <p>「科学的なアプローチと、実践的なビジネス英語に特化している点が魅力的でした。また、短期間で成果を出せるという点も決め手になりました。」</p>
         
         <h2>学習の成果</h2>
@@ -312,20 +312,20 @@ export default function TopicDetail() {
         </ul>
         
         <h2>転職活動での活用</h2>
-        <p>「英語習得研究所で学んだビジネス英語が、面接や書類作成で大いに役立ちました。特に、技術的な内容を英語で説明する練習ができたのが良かったです。」</p>
+        <p>「Utah Study Supportで学んだビジネス英語が、面接や書類作成で大いに役立ちました。特に、技術的な内容を英語で説明する練習ができたのが良かったです。」</p>
         
         <h2>現在の仕事</h2>
         <p>「現在は、米国の本社チームと協力してプロジェクトを進めています。英語での会議やメールのやり取りも、以前は想像できませんでしたが、今では自然にこなせています。」</p>
         
         <h2>今後の目標</h2>
-        <p>「さらに英語力を向上させて、海外拠点での勤務も視野に入れています。英語習得研究所で身につけた学習習慣を活かして、継続的に成長していきたいです。」</p>
+        <p>「さらに英語力を向上させて、海外拠点での勤務も視野に入れています。Utah Study Supportで身につけた学習習慣を活かして、継続的に成長していきたいです。」</p>
         
         <h2>後輩へのメッセージ</h2>
         <blockquote>
-          "英語力は一朝一夕には身につきませんが、正しい方法で継続すれば必ず成果が出ます。英語習得研究所の科学的なアプローチを信じて、諦めずに学習を続けてください。"
+          "英語力は一朝一夕には身につきませんが、正しい方法で継続すれば必ず成果が出ます。Utah Study Supportの科学的なアプローチを信じて、諦めずに学習を続けてください。"
         </blockquote>
         
-        <p>山田さんのような成功事例は、英語習得研究所の受講生の中にたくさんあります。あなたも次の成功事例になりませんか？</p>
+        <p>山田さんのような成功事例は、Utah Study Supportの受講生の中にたくさんあります。あなたも次の成功事例になりませんか？</p>
       `,
     },
     {
@@ -393,7 +393,7 @@ export default function TopicDetail() {
       category: "メソッド",
       image: "/news-07.jpg",
       content: `
-        <p>英語習得研究所は、最新の脳科学研究に基づく新しい学習メソッド「英語習得研究所 Advanced Learning System（PALS）」を開発し、発表いたします。</p>
+        <p>Utah Study Supportは、最新の脳科学研究に基づく新しい学習メソッド「Utah Study Support Advanced Learning System（PALS）」を開発し、発表いたします。</p>
         
         <h2>PALSの特徴</h2>
         
@@ -451,7 +451,7 @@ export default function TopicDetail() {
       category: "実績",
       image: "/news-08.jpg",
       content: `
-        <p>英語習得研究所の企業研修プログラムの導入企業数が100社を突破し、多くの企業様にご利用いただいております。</p>
+        <p>Utah Study Supportの企業研修プログラムの導入企業数が100社を突破し、多くの企業様にご利用いただいております。</p>
         
         <h2>導入企業の内訳</h2>
         <ul>
@@ -511,7 +511,7 @@ export default function TopicDetail() {
         <h2>今後の展開</h2>
         <p>100社突破を記念して、新たな企業研修プログラムの開発を進めています。AI技術を活用した個別最適化や、VR技術を活用した疑似体験型研修など、革新的なプログラムを準備中です。</p>
         
-        <p>企業のグローバル化を支援する英語習得研究所の企業研修プログラムを、ぜひご検討ください。</p>
+        <p>企業のグローバル化を支援するUtah Study Supportの企業研修プログラムを、ぜひご検討ください。</p>
       `,
     },
   ];
@@ -552,7 +552,7 @@ export default function TopicDetail() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold">
-                <span className="text-black">英語習得研究所</span>
+                <span className="text-black">Utah Study Support</span>
               </Link>
             </div>
 
@@ -561,7 +561,7 @@ export default function TopicDetail() {
                 href="/about"
                 className="text-gray-600 hover:text-gray-900 text-sm font-medium"
               >
-                英語習得研究所とは
+                Utah Study Supportとは
               </Link>
               <Link
                 href="/courses"

@@ -23,7 +23,7 @@ export default function CommercePage() {
               販売業者
             </h2>
             <p className="text-gray-700">
-              株式会社英語習得研究所
+              株式会社Utah Study Support
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function CommercePage() {
               サービス内容
             </h2>
             <p className="text-gray-700">
-              英語コーチングサービス「英語習得研究所」の提供
+              英語コーチングサービス「Utah Study Support」の提供
             </p>
           </div>
 

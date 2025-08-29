@@ -18,7 +18,7 @@ function TestimonialsCarousel() {
       name: "Aさん",
       job: "20代・商社",
       comment:
-        "英語習得研究所受講前は英語に自信がありませんでしたが、3ヶ月で劇的に変わりました。",
+        "Utah Study Support受講前は英語に自信がありませんでしたが、3ヶ月で劇的に変わりました。",
     },
     {
       name: "Bさん",
@@ -51,14 +51,14 @@ function TestimonialsCarousel() {
   const cards = originalCards;
 
   const getCardWidth = useCallback(() => {
-    if (typeof window === "undefined") return 200;
+    if (typeof window === "undefined") return 288;
     const width = window.innerWidth;
-    if (width >= 1536) return 300 + 24;
-    if (width >= 1280) return 250 + 24;
-    if (width >= 1024) return 200 + 24;
-    if (width >= 768) return 180 + 24;
-    if (width >= 640) return 160 + 24;
-    return 140 + 24;
+    if (width >= 1536) return 432 + 24;
+    if (width >= 1280) return 360 + 24;
+    if (width >= 1024) return 312 + 24;
+    if (width >= 768) return 264 + 24;
+    if (width >= 640) return 240 + 24;
+    return 216 + 24;
   }, []);
 
   const [cardWidth, setCardWidth] = useState(() => getCardWidth());
@@ -159,7 +159,7 @@ function TestimonialsCarousel() {
 
   return (
     <section 
-      className="py-8" 
+      className="pt-8 pb-12" 
       style={{ backgroundColor: "#242424" }}
       role="region"
       aria-labelledby="testimonials-heading"
@@ -239,55 +239,54 @@ function TestimonialsCarousel() {
               aria-label={`${originalCards.length}件の口コミ、現在${currentIndex + 1}件目を表示中`}
             >
               {cards.map((card, index) => (
-                <motion.div
+                <div
                   key={`${card.name}-${index}`}
-                  className="bg-white border border-gray-200 shadow-sm overflow-hidden 
-                             w-[140px] sm:w-[160px] md:w-[180px] lg:w-[200px] xl:w-[250px] 2xl:w-[300px]
+                  className="relative w-[216px] sm:w-[240px] md:w-[264px] lg:w-[312px] xl:w-[360px] 2xl:w-[432px]
                              flex-shrink-0"
-                  style={{ scrollSnapAlign: "start" }}
-                  role="group"
-                  aria-roledescription="slide"
-                  aria-label={`${index + 1}件目の口コミ: ${card.name}さん（${card.job}）`}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ 
-                    duration: 0.6, 
-                    delay: index * 0.1,
-                    ease: [0.25, 0.1, 0.25, 1]
+                  style={{ 
+                    scrollSnapAlign: "start",
+                    border: "2px solid #E7910A"
                   }}
-                  whileHover={{ 
-                    scale: 1.05,
-                    y: -8,
-                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                    transition: { duration: 0.3 }
-                  }}
-                  whileTap={{ scale: 0.98 }}
                 >
-                  <motion.div 
-                    className="aspect-[2/1] bg-gradient-to-br from-orange-100 to-orange-200"
-                  />
-                  <div className="p-4">
+                  <motion.div
+                    className="bg-white shadow-sm overflow-hidden w-full h-full"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label={`${index + 1}件目の口コミ: ${card.name}さん（${card.job}）`}
+                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: index * 0.1,
+                      ease: [0.25, 0.1, 0.25, 1]
+                    }}
+                  >
                     <motion.div 
-                      className="mb-3"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: index * 0.1 + 0.3 }}
-                    >
-                      <div className="font-medium text-sm">{card.name}</div>
-                      <div className="text-xs text-gray-500">
-                        {card.job}
-                      </div>
-                    </motion.div>
-                    <motion.p 
-                      className="text-sm text-gray-700"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: index * 0.1 + 0.5 }}
-                    >
-                      「{card.comment}」
-                    </motion.p>
-                  </div>
-                </motion.div>
+                      className="aspect-[2/1] bg-gradient-to-br from-orange-100 to-orange-200"
+                    />
+                    <div className="p-4">
+                      <motion.div 
+                        className="mb-3"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: index * 0.1 + 0.3 }}
+                      >
+                        <div className="font-medium text-sm">{card.name}</div>
+                        <div className="text-xs text-gray-500">
+                          {card.job}
+                        </div>
+                      </motion.div>
+                      <motion.p 
+                        className="text-sm text-gray-700"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: index * 0.1 + 0.5 }}
+                      >
+                        「{card.comment}」
+                      </motion.p>
+                    </div>
+                  </motion.div>
+                </div>
               ))}
             </div>
           </div>

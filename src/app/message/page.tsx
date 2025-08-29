@@ -16,8 +16,8 @@ export default function MessagePage() {
   const profileRef = useRef<HTMLElement>(null);
   const valuesRef = useRef<HTMLElement>(null);
 
-  const fullMessage = "私たち英語習得研究所は、「世界で自由に活躍できる人を増やす」という理念のもと、本質的な英語力向上を目指すコーチングサービスを提供しています。";
-  const fullMessage2 = "多くの日本人が英語学習で挫折してしまう原因は、正しい学習方法を知らないこと、そして継続できる環境がないことです。英語習得研究所では、応用言語学に基づいた科学的なアプローチと、専属コンサルタントによる徹底的なサポートにより、短期間で確実な成果をお約束します。";
+  const fullMessage = "私たちUtah Study Supportは、「世界で自由に活躍できる人を増やす」という理念のもと、本質的な英語力向上を目指すコーチングサービスを提供しています。";
+  const fullMessage2 = "多くの日本人が英語学習で挫折してしまう原因は、正しい学習方法を知らないこと、そして継続できる環境がないことです。Utah Study Supportでは、応用言語学に基づいた科学的なアプローチと、専属コンサルタントによる徹底的なサポートにより、短期間で確実な成果をお約束します。";
   const fullMessage3 = "英語は単なるツールではありません。新しい世界への扉であり、人生の可能性を広げる力です。私たちと一緒に、あなたの英語学習を成功に導きましょう。";
   const fullTitle = "英語学習に革命を起こす";
 
@@ -321,7 +321,7 @@ export default function MessagePage() {
           <div className="w-full h-[250px] relative">
             <Image
               src="/helo2.webp"
-              alt="英語習得研究所 Background"
+              alt="Utah Study Support Background"
               fill
               className="object-cover parallax-bg"
             />

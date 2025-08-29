@@ -44,7 +44,7 @@ export default function Company() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
               >
-                英語習得研究所は、本気で英語を身につけたい方を全力でサポートする英語コーチングサービスです。
+                Utah Study Supportは、本気で英語を身につけたい方を全力でサポートする英語コーチングサービスです。
                 科学的なアプローチと専属コンサルタントによるサポートで、短期間での英語力向上を実現します。
               </motion.p>
             </motion.div>
@@ -94,7 +94,7 @@ export default function Company() {
                       会社名
                     </div>
                     <div className="text-sm text-gray-900">
-                      株式会社英語習得研究所
+                      株式会社Utah Study Support
                     </div>
                   </div>
                   <div className="flex border-b border-gray-200 pb-4">
@@ -102,7 +102,7 @@ export default function Company() {
                       英文社名
                     </div>
                     <div className="text-sm text-gray-900">
-                      英語習得研究所 Inc.
+                      Utah Study Support Inc.
                     </div>
                   </div>
                   <div className="flex border-b border-gray-200 pb-4">
@@ -152,7 +152,7 @@ export default function Company() {
                       事業内容
                     </div>
                     <div className="text-sm text-gray-900">
-                      英語コーチングサービス「英語習得研究所」の運営<br />
+                      英語コーチングサービス「Utah Study Support」の運営<br />
                       法人向け英語研修サービスの提供<br />
                       教育コンテンツの企画・開発
                     </div>
@@ -187,8 +187,8 @@ export default function Company() {
                       2016年
                     </div>
                     <div className="text-sm text-gray-900">
-                      株式会社英語習得研究所設立<br />
-                      英語コーチングサービス「英語習得研究所」開始
+                      株式会社Utah Study Support設立<br />
+                      英語コーチングサービス「Utah Study Support」開始
                     </div>
                   </div>
                   <div className="flex">
@@ -455,7 +455,7 @@ export default function Company() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             >
-              英語習得研究所に関するご質問やご相談がございましたら、お気軽にお問い合わせください。
+              Utah Study Supportに関するご質問やご相談がございましたら、お気軽にお問い合わせください。
             </motion.p>
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
