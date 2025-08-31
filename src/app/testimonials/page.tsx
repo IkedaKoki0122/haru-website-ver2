@@ -1,10 +1,37 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { useState, useMemo, useCallback, memo, useRef, useEffect } from "react";
+import type { Metadata } from 'next';
+import TestimonialsClient from './TestimonialsClient';
 import Header from "../../components/Header";
+import Breadcrumb from "../../components/Breadcrumb";
 import Footer from "../../components/Footer";
-import { motion, useAnimation, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+
+export const metadata: Metadata = {
+  title: '体験者の声 | Utah Study Support',
+  description: '実際にUtah Study Supportのサービスを利用してユタ州留学を経験された方々の体験談、感想、成果をご紹介します。語学学校選びから現地サポートまで、実際の体験者の声をお聞きください。',
+  keywords: ['Utah Study Support', '体験者の声', 'ユタ州留学体験談', '語学学校体験', '留学成果', '口コミ', '留学体験'],
+  openGraph: {
+    title: '体験者の声 | Utah Study Support',
+    description: '実際にUtah Study Supportのサービスを利用してユタ州留学を経験された方々の体験談、感想、成果をご紹介。',
+    type: 'website',
+    url: 'https://utah-study-support.com/testimonials',
+    images: [
+      {
+        url: '/og-testimonials.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Utah Study Support 体験者の声',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '体験者の声 | Utah Study Support',
+    description: '実際にUtah Study Supportのサービスを利用してユタ州留学を経験された方々の体験談、感想、成果をご紹介。',
+    images: ['/og-testimonials.jpg'],
+  },
+  alternates: {
+    canonical: '/testimonials',
+  },
+};
 
 const AnimatedCounter = ({ value, suffix = "" }) => {
   const motionValue = useMotionValue(0);
@@ -94,6 +121,7 @@ function TestimonialsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header currentPage="/testimonials" />
+      <Breadcrumb />
 
       <main>
         {/* Hero Section */}
@@ -429,8 +457,11 @@ function TestimonialsPage() {
                   まずは無料カウンセリングで、あなたの英語学習の課題を分析し、
                   最適な学習プランをご提案いたします。
                 </motion.p>
-                <motion.button 
-                  className="bg-orange-500 text-white px-10 py-3 rounded-full text-lg font-bold relative overflow-hidden group"
+                <motion.a 
+                  href="https://line.me/R/ti/p/@your-line-id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-orange-500 text-white px-10 py-3 rounded-full text-lg font-bold relative overflow-hidden group text-center"
                   initial={{ opacity: 0, y: 20, scale: 0.9 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.9 }}
@@ -450,7 +481,7 @@ function TestimonialsPage() {
                     whileHover={{ x: 0 }}
                     transition={{ duration: 0.3 }}
                   />
-                </motion.button>
+                </motion.a>
               </motion.div>
             </div>
           </div>

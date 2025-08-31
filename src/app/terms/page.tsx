@@ -1,10 +1,12 @@
 import Header from "../../components/Header";
+import Breadcrumb from "../../components/Breadcrumb";
 import Footer from "../../components/Footer";
 
 export default function Terms() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumb />
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 py-16">

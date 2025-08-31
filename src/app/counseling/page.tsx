@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Header from "../../components/Header";
+import Breadcrumb from "../../components/Breadcrumb";
 import Footer from "../../components/Footer";
 import { logger } from "@/utils/logger";
 import { useToastContext } from "@/context/ToastContext";
@@ -75,6 +76,7 @@ export default function Counseling() {
     return (
       <div className="min-h-screen bg-white">
         <Header />
+        <Breadcrumb />
         
         <main className="py-16">
           <div className="max-w-2xl mx-auto px-6 text-center">
@@ -110,6 +112,7 @@ export default function Counseling() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumb />
 
       <main>
         {/* Hero Section */}

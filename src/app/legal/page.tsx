@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Header from "../../components/Header";
+import Breadcrumb from "../../components/Breadcrumb";
 import Footer from "../../components/Footer";
 
 const legalDocuments = [
@@ -63,20 +64,9 @@ export default function Legal() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumb />
 
       <main>
-        {/* Breadcrumb */}
-        <div className="bg-gray-50 py-4">
-          <div className="max-w-6xl mx-auto px-6">
-            <nav className="text-sm">
-              <Link href="/" className="text-gray-500 hover:text-gray-700">
-                ホーム
-              </Link>
-              <span className="mx-2 text-gray-500">/</span>
-              <span className="text-gray-900">法的情報</span>
-            </nav>
-          </div>
-        </div>
 
         {/* Page Title */}
         <section className="py-16 bg-white">
@@ -171,12 +161,6 @@ export default function Legal() {
                   className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 hover:scale-105 hover:shadow-lg font-medium transition-all duration-300 ease-out transform inline-block"
                 >
                   お問い合わせ
-                </Link>
-                <Link 
-                  href="/faq"
-                  className="border border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:bg-gray-50 hover:scale-105 hover:shadow-md font-medium transition-all duration-300 ease-out transform inline-block"
-                >
-                  よくある質問
                 </Link>
               </div>
             </div>

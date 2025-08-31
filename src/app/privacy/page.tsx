@@ -2,12 +2,14 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "../../components/Header";
+import Breadcrumb from "../../components/Breadcrumb";
 import Footer from "../../components/Footer";
 
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumb />
 
       {/* Main Content */}
       <motion.main 

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@edge-csrf/nextjs": "^2.5.2",
+    "@heroicons/react": "^2.2.0",
     "@upstash/ratelimit": "^2.0.6",
     "@upstash/redis": "^1.35.3",
     "@vercel/blob": "^1.1.1",

@@ -1,8 +1,15 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
-export default async function HeroSection() {
+export default function HeroSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
   return (
-    <section className="relative overflow-hidden bg-gray-100">
+    <section className="relative overflow-hidden bg-gray-100" ref={ref}>
       <div className="w-full relative">
         <Image
           src="/helo.webp"
@@ -17,6 +24,7 @@ export default async function HeroSection() {
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
+        
       </div>
     </section>
   );

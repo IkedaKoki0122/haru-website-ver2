@@ -1,149 +1,179 @@
-"use client";
+import type { Metadata } from 'next';
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Image from "next/image";
-import { motion } from "framer-motion";
+
+export const metadata: Metadata = {
+  title: 'ユタ州語学学校一覧 | Utah Study Support',
+  description: 'ユタ州プロボ市の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Centerなど、Utah Study Supportが完選した優良語学学校の特徴、料金、サービス内容を詳しく解説します。',
+  keywords: ['Utah Study Support', 'ユタ州語学学校', 'UCEDA School', 'Internexus Provo', 'BYU English Language Center', 'プロボ語学学校', 'ユタ州留学'],
+  openGraph: {
+    title: 'ユタ州語学学校一覧 | Utah Study Support',
+    description: 'ユタ州プロボ市の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Centerなど、優良語学学校の特徴、料金、サービス内容を詳しく解説。',
+    type: 'website',
+    url: 'https://utah-study-support.com/schools',
+    images: [
+      {
+        url: '/og-schools.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Utah Study Support ユタ州語学学校一覧',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ユタ州語学学校一覧 | Utah Study Support',
+    description: 'ユタ州プロボ市の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Centerなど、優良語学学校の特徴、料金、サービス内容を詳しく解説。',
+    images: ['/og-schools.jpg'],
+  },
+  alternates: {
+    canonical: '/schools',
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'ユタ州語学学校一覧',
+  description: 'ユタ州プロボ市の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Centerなど、特徴や料金を詳しく解説します。',
+  url: 'https://utahstudysupport.com/schools',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: 3,
+    itemListElement: [
+      {
+        '@type': 'EducationalOrganization',
+        position: 1,
+        name: 'UCEDA School (Provo)',
+        description: '少人数制で実践的な英語学習。柔軟なスケジュールとリーズナブルな料金が魅力。',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Provo',
+          addressRegion: 'UT',
+          addressCountry: 'US'
+        }
+      },
+      {
+        '@type': 'EducationalOrganization',
+        position: 2,
+        name: 'Internexus Provo',
+        description: 'アカデミック英語に特化。学生ビザサポートと少人数クラスで質の高い教育を提供。',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Provo',
+          addressRegion: 'UT',
+          addressCountry: 'US'
+        }
+      },
+      {
+        '@type': 'EducationalOrganization',
+        position: 3,
+        name: 'Brigham Young University (BYU) - English Language Center',
+        description: 'BYUキャンパス内で学習。大学施設利用可能で大学進学準備コースも充実。',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Provo',
+          addressRegion: 'UT',
+          postalCode: '84602',
+          addressCountry: 'US'
+        }
+      }
+    ]
+  }
+};
 
 export default function Schools() {
   const schools = [
     {
-      name: "新宿校",
-      area: "東京",
-      address: "〒160-0022 東京都新宿区新宿3-38-1 ルミネエスト新宿店8F",
-      phone: "03-6279-4312",
-      hours: "平日 10:00-21:00 / 土日祝 9:30-18:00",
-      access: "JR新宿駅東口徒歩1分",
-      features: ["完全個室", "自習室完備", "コンサルタント常駐"]
+      name: "UCEDA School（Provo）",
+      area: "ユタ州プロボ",
+      address: "Provo, UT",
+      phone: "",
+      hours: "$275/月",
+      access: "プロボ市内",
+      features: ["少人数制", "実践的英語", "柔軟なスケジュール", "リーズナブル"],
+      image: "/uceda.jpg"
     },
     {
-      name: "渋谷校",
-      area: "東京",
-      address: "〒150-0043 東京都渋谷区道玄坂1-2-3 渋谷フクラス17F",
-      phone: "03-6427-5207",
-      hours: "平日 10:00-21:00 / 土日祝 9:30-18:00",
-      access: "JR渋谷駅西口徒歩3分",
-      features: ["最新設備", "景観良好", "アクセス抜群"]
+      name: "Internexus Provo",
+      area: "ユタ州プロボ",
+      address: "Provo, UT",
+      phone: "",
+      hours: "初セメスター：$2,100（$525/月）、書籍：約$160",
+      access: "プロボ市内",
+      features: ["アカデミック英語", "学生ビザサポート", "少人数クラス", "書籍費別途"],
+      image: "/Internexus.webp"
     },
     {
-      name: "池袋校",
-      area: "東京",
-      address: "〒171-0021 東京都豊島区西池袋1-11-1 ルミネ池袋8F",
-      phone: "03-5904-8010",
-      hours: "平日 10:00-21:00 / 土日祝 9:30-18:00",
-      access: "JR池袋駅西口徒歩1分",
-      features: ["駅直結", "静かな環境", "集中学習"]
-    },
-    {
-      name: "神田秋葉原校",
-      area: "東京",
-      address: "〒101-0021 東京都千代田区外神田1-18-13 秋葉原ダイビル8F",
-      phone: "03-6206-9871",
-      hours: "平日 10:00-21:00 / 土日祝 9:30-18:00",
-      access: "JR秋葉原駅電気街口徒歩4分",
-      features: ["落ち着いた雰囲気", "IT関連企業多数", "ビジネス街"]
-    },
-    {
-      name: "有楽町校",
-      area: "東京",
-      address: "〒100-0006 東京都千代田区有楽町2-10-1 東京交通会館10F",
-      phone: "03-6259-1374",
-      hours: "平日 10:00-21:00 / 土日祝 9:30-18:00",
-      access: "JR有楽町駅京橋口徒歩1分",
-      features: ["銀座至近", "ビジネス中心地", "充実施設"]
-    },
-    {
-      name: "横浜校",
-      area: "神奈川",
-      address: "〒220-0004 神奈川県横浜市西区北幸2-1-22 ナガオカビル7F",
-      phone: "045-548-8450",
-      hours: "平日 10:00-21:00 / 土日祝 9:30-18:00",
-      access: "JR横浜駅西口徒歩5分",
-      features: ["横浜エリア唯一", "交通便利", "関内アクセス良好"]
+      name: "Brigham Young University (BYU) – English Language Center",
+      area: "ユタ州プロボ",
+      address: "Provo, UT 84602",
+      phone: "",
+      hours: "$2,800/セメスター（$700/月）",
+      access: "BYUキャンパス内",
+      features: ["BYUキャンパス内での学習", "少人数制クラス", "大学施設の利用可能", "アクティビティプログラム", "大学進学準備コース", "I-20発行"],
+      image: "/BYUELC.webp"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd)
+        }}
+      />
       <Header currentPage="/schools" />
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-6 py-16">
-        <motion.div 
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h1 
-            className="text-3xl font-bold text-gray-900 mb-4"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          >
-            スクール一覧
-          </motion.h1>
-          <motion.p 
-            className="text-gray-600 max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          >
-            全国に展開するUtah Study Supportスクールからお近くの校舎をお選びください。
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            ユタ州語学学校一覧
+          </h1>
+          <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Utah Study Supportが厳選した、ユタ州プロボエリアの優良語学学校をご紹介。
             <br />
-            どの校舎も最高品質の英語コーチングサービスを提供しています。
-          </motion.p>
-        </motion.div>
+            質の高い英語教育と快適な生活環境で、あなたの留学目標達成を全力でサポートします。
+          </p>
+        </div>
 
         {/* Schools Grid */}
-        <motion.div 
-          className="grid md:grid-cols-2 gap-8 mb-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           {schools.map((school, index) => (
-            <motion.div 
+            <div 
               key={index} 
               className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-              initial={{ opacity: 0, y: 80, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ 
-                duration: 0.7, 
-                delay: 0.8 + index * 0.15,
-                ease: "easeOut",
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ 
-                scale: 1.03,
-                y: -8,
-                boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-                transition: { duration: 0.3, ease: "easeOut" }
-              }}
-              whileTap={{ scale: 0.98 }}
             >
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-1">{school.name}</h2>
-                  <div className="text-sm text-gray-500">{school.area}</div>
-                </div>
-                <div className="text-sm text-orange-500 font-medium">
-                  {school.access}
+              <div className="mb-4">
+                <Image
+                  src={school.image}
+                  alt={school.name}
+                  width={400}
+                  height={250}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h2 className="text-xl font-bold text-gray-900 mb-1">{school.name}</h2>
+                    <div className="text-sm text-gray-500">{school.area}</div>
+                  </div>
+                  <div className="text-sm text-orange-500 font-medium">
+                    {school.access}
+                  </div>
                 </div>
               </div>
               
               <div className="space-y-3 mb-6">
                 <div>
-                  <div className="text-sm font-medium text-gray-700 mb-1">住所</div>
+                  <div className="text-sm font-medium text-gray-700 mb-1">所在地</div>
                   <div className="text-sm text-gray-600">{school.address}</div>
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-gray-700 mb-1">電話番号</div>
-                  <div className="text-sm text-gray-600">{school.phone}</div>
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-gray-700 mb-1">営業時間</div>
+                  <div className="text-sm font-medium text-gray-700 mb-1">学費・料金</div>
                   <div className="text-sm text-gray-600">{school.hours}</div>
                 </div>
               </div>
@@ -163,80 +193,39 @@ export default function Schools() {
               </div>
 
               <div className="flex gap-3">
-                <motion.button 
-                  className="flex-1 bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 font-medium text-sm"
-                  whileHover={{ scale: 1.05, backgroundColor: "#ea580c" }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  無料カウンセリング予約
-                </motion.button>
-                <motion.button 
-                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 font-medium text-sm"
-                  whileHover={{ scale: 1.05, backgroundColor: "#f9fafb" }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <button className="flex-1 bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 font-medium text-sm">
+                  Utah Study Supportに相談する
+                </button>
+                <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 font-medium text-sm">
                   詳細
-                </motion.button>
+                </button>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Contact Section */}
-        <motion.div 
-          className="bg-gray-50 rounded-lg p-8 text-center"
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.8, ease: "easeOut" }}
-        >
-          <motion.h2 
-            className="text-2xl font-bold text-gray-900 mb-4"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 2.0, ease: "easeOut" }}
-          >
-            お近くの校舎が見つからない場合
-          </motion.h2>
-          <motion.p 
-            className="text-gray-600 mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 2.2, ease: "easeOut" }}
-          >
-            オンラインでも同様の高品質なコーチングサービスを受けることができます。
+        <div className="bg-gray-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            留学プログラムについてもっと知りたい方へ
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Utah Study Supportでは、ユタ州留学に関する詳しい情報提供や個別相談を行っています。
             <br />
-            まずはお気軽にお問い合わせください。
-          </motion.p>
-          <motion.div 
-            className="flex justify-center gap-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 2.4, ease: "easeOut" }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
+            語学学校選びから住居探しまで、経験豊富なスタッフがあなたの留学を完全サポートします。
+          </p>
+          <div className="flex justify-center gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-block bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 font-medium"
             >
-              <Link 
-                href="/contact" 
-                className="inline-block bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 font-medium"
-              >
-                お問い合わせ
-              </Link>
-            </motion.div>
-            <motion.button 
-              className="border border-orange-500 text-orange-500 px-8 py-3 rounded-full hover:bg-orange-50 font-medium"
-              whileHover={{ scale: 1.05, y: -3, backgroundColor: "#fff7ed" }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
-              オンライン受講について
-            </motion.button>
-          </motion.div>
-        </motion.div>
+              お問い合わせ
+            </Link>
+            <button className="border border-orange-500 text-orange-500 px-8 py-3 rounded-full hover:bg-orange-50 font-medium">
+              留学プログラム詳細
+            </button>
+          </div>
+        </div>
       </main>
 
       <Footer />

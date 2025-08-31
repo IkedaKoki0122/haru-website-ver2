@@ -1,16 +1,41 @@
 import type { Metadata } from 'next';
 import Image from "next/image";
 import Header from "../../components/Header";
+import Breadcrumb from "../../components/Breadcrumb";
 import Footer from "../../components/Footer";
 import CoursesClient from "./CoursesClient";
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Utah Study Support - ユタ州留学サポートサービス',
+  description: '学校選びから住居手配、現地サポートまで、ユタ州留学をトータルサポート。業界最安値¥79,800でプロフェッショナルな留学支援を提供します。',
+  provider: {
+    '@type': 'Organization',
+    name: 'Utah Study Support',
+    url: 'https://utahstudysupport.com'
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: '基本サポートプラン',
+      price: '79800',
+      priceCurrency: 'JPY',
+      description: '語学学校選び、住居手配、現地サポートまでの基本的な留学支援サービス'
+    }
+  ],
+  areaServed: 'Utah',
+  serviceType: '留学斡旋サービス',
+  url: 'https://utahstudysupport.com/courses'
+};
+
 export const metadata: Metadata = {
-  title: 'コース・料金 | Utah Study Support - 英語コーチング',
-  description: 'Utah Study Supportの各種英語コースと料金をご紹介。ビジネス英会話、TOEIC、TOEFL、初級者向けなど、あなたの目標に合わせた最適なコースをお選びください。3ヶ月の短期集中で確実な英語力向上を実現します。',
-  keywords: ['英語コース', '英語学習', 'TOEIC対策', 'ビジネス英語', '英語コーチング', 'Utah Study Support', '短期集中', '英会話'],
+  title: 'サービス・料金 | Utah Study Support - ユタ州留学サポート',
+  description: 'Utah Study Supportの留学サポートサービスと料金をご紹介。学校選びから住居手配、現地サポートまで、ユタ州留学をトータルサポート。業界最安値¥79,800でプロフェッショナルな留学支援を提供します。',
+  keywords: ['ユタ州留学', '留学サポート', '語学学校', '住居手配', '現地サポート', 'Utah Study Support', '留学斡旋', 'プロボ'],
   openGraph: {
-    title: 'コース・料金 | Utah Study Support - 英語コーチング',
-    description: 'Utah Study Supportの各種英語コースと料金をご紹介。ビジネス英会話、TOEIC、TOEFL、初級者向けなど、あなたの目標に合わせた最適なコースをお選びください。',
+    title: 'サービス・料金 | Utah Study Support - ユタ州留学サポート',
+    description: 'Utah Study Supportの留学サポートサービスと料金をご紹介。学校選びから住居手配、現地サポートまで、ユタ州留学をトータルサポート。',
     type: 'website',
     locale: 'ja_JP',
     siteName: 'Utah Study Support',
@@ -25,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'コース・料金 | Utah Study Support - 英語コーチング',
-    description: 'Utah Study Supportの各種英語コースと料金をご紹介。あなたの目標に合わせた最適なコースをお選びください。',
+    title: 'サービス・料金 | Utah Study Support - ユタ州留学サポート',
+    description: 'Utah Study Supportの留学サポートサービスと料金をご紹介。ユタ州留学をトータルサポート。',
   },
   robots: {
     index: true,
@@ -44,7 +69,14 @@ export default function CoursesPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd)
+        }}
+      />
       <Header currentPage="/courses" />
+      <Breadcrumb />
 
       <main>
         {/* Hero Section */}
@@ -52,10 +84,10 @@ export default function CoursesPage() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                コース・料金
+                サービス・料金
               </h1>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                あなたの目標に合わせた最適なコースをお選びください
+                ユタ州留学の夢を実現する充実のサポートサービス
               </p>
             </div>
           </div>
@@ -64,15 +96,16 @@ export default function CoursesPage() {
         {/* Interactive Courses Section */}
         <CoursesClient />
 
+
         {/* Features Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Utah Study Supportの特徴
+                Utah Study Supportが選ばれる理由
               </h2>
               <p className="text-gray-600">
-                短期集中で確実に英語力を向上させる3つのポイント
+                ユタ州留学を成功に導く3つのサポート
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -87,10 +120,10 @@ export default function CoursesPage() {
                   />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  科学的カリキュラム
+                  専門的な留学サポート
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  応用言語学に基づいた科学的アプローチで、短期間で確実な英語力向上を実現します。
+                  ユタ州に特化した専門知識で、学校選びから手続きまで最適な留学プランをご提案します。
                 </p>
               </div>
               <div className="text-center bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
@@ -104,10 +137,10 @@ export default function CoursesPage() {
                   />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  専属コンサルタント
+                  現地サポート体制
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  英語学習のプロフェッショナルが、あなた専用のカリキュラムで学習進捗を徹底管理。
+                  現地スタッフによる24時間対応で、留学中の困ったをすぐに解決。安心の留学生活をお約束。
                 </p>
               </div>
               <div className="text-center bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
@@ -121,10 +154,10 @@ export default function CoursesPage() {
                   />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  継続サポート
+                  充実のアフターケア
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  毎日の学習管理から週次面談まで、挫折しない仕組みで学習継続をサポート。
+                  渡航前の準備から帰国後のキャリアサポートまで、留学の全工程をトータルサポート。
                 </p>
               </div>
             </div>
@@ -142,34 +175,34 @@ export default function CoursesPage() {
             <div className="space-y-6">
               <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-orange-200 transition-all">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Q. 英語初心者でも受講できますか？
+                  Q. 英語力に自信がなくても留学できますか？
                 </h3>
                 <p className="text-gray-600">
-                  A. はい、初級者コースでは英語学習が初めての方でも安心して受講いただけるよう、基礎から丁寧に指導いたします。
+                  A. はい、語学学校では初級クラスから上級クラスまで幅広いレベルに対応しています。事前の英語力診断で最適な学校をご提案します。
                 </p>
               </div>
               <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-orange-200 transition-all">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Q. 受講期間中はどのくらい学習時間が必要ですか？
+                  Q. 留学期間はどのくらいがおすすめですか？
                 </h3>
                 <p className="text-gray-600">
-                  A. 1日約3時間の学習を推奨しております。専属コンサルタントがあなたのライフスタイルに合わせた学習計画を立てます。
+                  A. 目的により異なりますが、3ヶ月～1年が一般的です。短期留学から長期留学まで、ご希望に合わせたプランをご提案します。
                 </p>
               </div>
               <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-orange-200 transition-all">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Q. オンラインでの受講は可能ですか？
+                  Q. 住居の手配もお願いできますか？
                 </h3>
                 <p className="text-gray-600">
-                  A. はい、全てのコースでオンライン受講が可能です。面談もオンラインで実施いたします。
+                  A. はい、提携アパートやホームステイなど、ご希望と予算に合わせた住居をご紹介・手配いたします。
                 </p>
               </div>
               <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-orange-200 transition-all">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Q. 受講料の分割払いは可能ですか？
+                  Q. サポート料金の支払い方法は？
                 </h3>
                 <p className="text-gray-600">
-                  A. はい、クレジットカード決済により分割払いが可能です。詳細はお申込み時にご確認ください。
+                  A. 銀行振込、クレジットカード決済に対応しています。分割払いのご相談も承っております。
                 </p>
               </div>
             </div>
@@ -180,14 +213,19 @@ export default function CoursesPage() {
         <section className="py-16 bg-orange-50">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              無料カウンセリング実施中
+              無料留学相談実施中
             </h2>
             <p className="text-gray-600 mb-8">
-              あなたの英語学習の課題を分析し、最適な学習プランをご提案いたします。
+              あなたの留学の夢や目標をお聞きして、最適な留学プランをご提案いたします。
             </p>
-            <button className="bg-orange-500 text-white px-10 py-3 rounded-full hover:bg-orange-600 text-lg font-medium transition-colors">
+            <a 
+              href="https://line.me/R/ti/p/@your-line-id" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-orange-500 text-white px-10 py-3 rounded-full hover:bg-orange-600 text-lg font-medium transition-colors"
+            >
               今すぐ申し込む
-            </button>
+            </a>
           </div>
         </section>
       </main>

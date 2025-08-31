@@ -1,84 +1,131 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { useMemo, memo } from "react";
-import { motion } from "framer-motion";
+import type { Metadata } from 'next';
+import TopicsClient from './TopicsClient';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+
+export const metadata: Metadata = {
+  title: 'ニュース・トピックス | Utah Study Support',
+  description: 'ユタ州留学に関する最新ニュースや情報をお届けします。大学入学サポート、住居情報、ビザ申請手続き、学生体験談など、Utah Study Supportの最新情報をチェックしてください。',
+  keywords: ['Utah Study Support', 'ユタ州留学ニュース', 'トピックス', '留学情報', '大学入学サポート', '住居情報', 'ビザ申請', '体験談'],
+  openGraph: {
+    title: 'ニュース・トピックス | Utah Study Support',
+    description: 'ユタ州留学に関する最新ニュースや情報をお届け。大学入学サポート、住居情報、ビザ申請手続き、学生体験談などの最新情報。',
+    type: 'website',
+    url: 'https://utah-study-support.com/topics',
+    images: [
+      {
+        url: '/og-topics.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Utah Study Support ニュース・トピックス',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ニュース・トピックス | Utah Study Support',
+    description: 'ユタ州留学に関する最新ニュースや情報をお届け。大学入学サポート、住居情報、ビザ申請手続き、学生体験談などの最新情報。',
+    images: ['/og-topics.jpg'],
+  },
+  alternates: {
+    canonical: '/topics',
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'ユタ州留学ニュース・トピックス',
+  description: 'ユタ州留学に関する最新ニュースや情報をお届け。大学入学サポート、住居情報、ビザ申請手続き、学生体験談など役立つ情報が満載です。',
+  url: 'https://utahstudysupport.com/topics',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Utah Study Support',
+    url: 'https://utahstudysupport.com'
+  },
+  inLanguage: 'ja'
+};
 
 function Topics() {
   const newsItems = useMemo(() => [
     {
       id: 1,
       date: "2024.08.15",
-      title: "夏季集中プログラム受付開始のお知らせ",
-      excerpt: "この夏、英語力を一気に向上させませんか？夏季限定の集中プログラムの受付を開始いたします。",
-      category: "お知らせ",
+      title: "ユタ州大学2025年度入学申請サポート開始",
+      excerpt: "ユタ州の主要大学への2025年度入学申請サポートを開始しました。経験豊富なスタッフが合格まで完全サポートいたします。",
+      category: "留学準備",
       image: "/news-01.jpg"
     },
     {
       id: 2,
       date: "2024.08.10",
-      title: "新講師陣紹介：グローバル企業出身のプロフェッショナル",
-      excerpt: "世界的な企業での豊富な経験を持つ新しい講師陣が加わりました。実践的なビジネス英語をお教えします。",
-      category: "講師紹介",
+      title: "プロボ市の新しい学生アパート情報",
+      excerpt: "ユタ州プロボ市に新しい学生向けアパートがオープン。キャンパスから徒歩圏内の好立地で、留学生に人気の設備が充実しています。",
+      category: "住居情報",
       image: "/news-02.jpg"
     },
     {
       id: 3,
       date: "2024.08.05",
-      title: "TOEIC平均スコア向上率95%達成",
-      excerpt: "受講生のTOEICスコア向上率が過去最高を記録しました。科学的メソッドの効果が実証されています。",
-      category: "実績",
+      title: "ユタ大学合格率95%達成！2024年度実績",
+      excerpt: "Utah Study Support経由での2024年度ユタ大学合格率が95%を達成しました。徹底したサポート体制の成果です。",
+      category: "学校情報",
       image: "/news-03.jpg"
     },
     {
       id: 4,
       date: "2024.07.30",
-      title: "オンライン受講システムのアップデート完了",
-      excerpt: "より使いやすく、より効果的な学習環境を提供するため、オンラインシステムを大幅にアップデートしました。",
-      category: "システム",
+      title: "学生ビザ申請手続きの最新情報",
+      excerpt: "2024年度のアメリカ学生ビザ申請手続きに関する最新情報をお届け。申請から取得までの流れを詳しく解説します。",
+      category: "ビザ・手続き",
       image: "/news-04.jpg"
     },
     {
       id: 5,
       date: "2024.07.25",
-      title: "受講生インタビュー：外資系転職成功事例",
-      excerpt: "Utah Study Supportで英語力を身につけ、念願の外資系企業への転職を成功させた受講生のインタビューをお届けします。",
-      category: "受講生の声",
+      title: "留学生インタビュー：ユタ大学での充実した学生生活",
+      excerpt: "Utah Study Supportを利用してユタ大学に留学中の学生による体験談。現地での学習環境や生活の様子をお届けします。",
+      category: "体験談",
       image: "/news-05.jpg"
     },
     {
       id: 6,
       date: "2024.07.20",
-      title: "新校舎開校予定：大阪梅田校",
-      excerpt: "関西エリアでのサービス拡充の一環として、大阪梅田に新しい校舎を開校予定です。",
-      category: "お知らせ",
+      title: "ユタ州の冬の気候と服装ガイド",
+      excerpt: "初めてユタ州で冬を過ごす留学生向けに、気候の特徴と適切な服装選びのポイントをご紹介します。",
+      category: "現地生活",
       image: "/news-06.jpg"
     },
     {
       id: 7,
       date: "2024.07.15",
-      title: "英語学習効果を最大化する新メソッド発表",
-      excerpt: "最新の脳科学研究に基づく新しい学習メソッドを開発しました。学習効率が従来比20%向上します。",
-      category: "メソッド",
+      title: "ユタ州立大学システムの特徴と選び方",
+      excerpt: "ユタ州には複数の州立大学があります。それぞれの特色や専攻分野を比較し、あなたに最適な大学選びをサポートします。",
+      category: "学校情報",
       image: "/news-07.jpg"
     },
     {
       id: 8,
       date: "2024.07.10",
-      title: "企業研修プログラム導入企業100社突破",
-      excerpt: "多くの企業様にご利用いただいている企業研修プログラムの導入企業数が100社を突破しました。",
-      category: "実績",
+      title: "留学前に準備すべき必需品チェックリスト",
+      excerpt: "ユタ州留学を控えている方向けに、現地で困らないために日本から持参すべき必需品をリストアップしました。",
+      category: "留学準備",
       image: "/news-08.jpg"
     }
   ], []);
 
-  const categories = useMemo(() => ["すべて", "お知らせ", "講師紹介", "実績", "システム", "受講生の声", "メソッド"], []);
+  const categories = useMemo(() => ["すべて", "留学準備", "現地生活", "学校情報", "住居情報", "体験談", "ビザ・手続き"], []);
 
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd)
+        }}
+      />
       <Header currentPage="/topics" />
+      <Breadcrumb />
 
       <main>
         {/* Hero Section */}
@@ -90,7 +137,7 @@ function Topics() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              トピックス
+              お役立ちブログ
             </motion.h1>
             <motion.p 
               className="text-xl text-blue-100"
@@ -98,7 +145,7 @@ function Topics() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              Utah Study Supportの最新情報・お知らせをお届けします
+              ユタ州留学に関するお役立ち情報をお届けします
             </motion.p>
           </div>
         </section>
@@ -275,7 +322,7 @@ function Topics() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 2.7 }}
                 >
-                  無料カウンセリング実施中
+                  無料留学相談実施中
                 </motion.h2>
                 <motion.p 
                   className="text-lg mb-8"
@@ -283,10 +330,13 @@ function Topics() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 2.9 }}
                 >
-                  あなたの英語学習の課題を分析し、最適な学習プランをご提案いたします。
+                  あなたのユタ州留学の目標を伺い、最適な留学プランをご提案いたします。
                 </motion.p>
-                <motion.button 
-                  className="bg-white text-orange-500 px-10 py-3 rounded-full hover:bg-gray-100 text-lg font-bold transition-colors"
+                <motion.a 
+                  href="https://line.me/R/ti/p/@your-line-id" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-orange-500 px-10 py-3 rounded-full hover:bg-gray-100 text-lg font-bold transition-colors"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 3.1 }}
@@ -294,7 +344,7 @@ function Topics() {
                   whileTap={{ scale: 0.95 }}
                 >
                   今すぐ申し込む
-                </motion.button>
+                </motion.a>
               </div>
             </div>
           </div>

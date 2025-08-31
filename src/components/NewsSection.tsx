@@ -1,6 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function NewsSection() {
   const ref = useRef(null);
@@ -8,18 +9,33 @@ export default function NewsSection() {
   const newsItems = [
     {
       date: "2024.01.15",
-      title: "新年度キャンペーン開始のお知らせ",
-      summary: "新年度応援キャンペーンを開始いたします。詳細は...",
+      title: "ユタ州の気候と留学生活の準備",
+      summary: "四季がはっきりしているユタ州での留学生活に必要な服装や持ち物について詳しく解説します...",
     },
     {
       date: "2024.01.10",
-      title: "新校舎開校のお知らせ",
-      summary: "この度、新たに渋谷校を開校いたします...",
+      title: "BYU周辺のおすすめスポット10選",
+      summary: "プロボ市内のBYU学生に人気のカフェ、レストラン、ショッピングエリアをご紹介...",
     },
     {
       date: "2024.01.05",
-      title: "年末年始休業のお知らせ",
-      summary: "誠に勝手ながら、年末年始は下記の通り...",
+      title: "ユタ州留学の学生ビザ申請ガイド",
+      summary: "F-1ビザ申請の手順と必要書類、面接対策まで完全網羅。初めての方でも安心...",
+    },
+    {
+      date: "2024.01.02",
+      title: "プロボの生活費と節約術",
+      summary: "ユタ州プロボでの1ヶ月の生活費の目安と、留学生向けの節約テクニックを紹介...",
+    },
+    {
+      date: "2023.12.28",
+      title: "ユタ州の文化と宗教について",
+      summary: "モルモン教の影響が強いユタ州の文化的特徴と、留学生として知っておくべきこと...",
+    },
+    {
+      date: "2023.12.25",
+      title: "語学学校選びの5つのポイント",
+      summary: "UCEDA、Internexus、BYU ELCなど、各語学学校の特徴と選び方のコツを解説...",
     },
   ];
 
@@ -61,8 +77,11 @@ export default function NewsSection() {
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            トピックス
+            お役立ちブログ
           </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            ユタ州留学に関する最新情報や現地生活のヒント、留学準備に役立つ情報をお届けします
+          </p>
         </motion.div>
         
         <motion.div 
@@ -71,7 +90,7 @@ export default function NewsSection() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {newsItems.map((item, index) => (
+          {newsItems.slice(0, 6).map((item, index) => (
             <motion.div 
               key={index} 
               className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
@@ -129,6 +148,23 @@ export default function NewsSection() {
               </motion.div>
             </motion.div>
           ))}
+        </motion.div>
+        
+        <motion.div 
+          className="text-center mt-10"
+          initial={{ y: 40, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <Link href="/topics">
+            <motion.button 
+              className="inline-block bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 font-medium transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              すべての記事を見る
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -1,7 +1,8 @@
-"use client";
-import { useParams, useRouter } from "next/navigation";
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import Header from "../../../components/Header";
+import Breadcrumb from "../../../components/Breadcrumb";
 import Footer from "../../../components/Footer";
 
 interface NewsItem {
@@ -14,14 +15,92 @@ interface NewsItem {
   content?: string;
 }
 
-export default function TopicDetail() {
-  const params = useParams();
-  const router = useRouter();
-  const [article, setArticle] = useState<NewsItem | null>(null);
-  const [loading, setLoading] = useState(true);
+// 記事データ（実際のプロジェクトではAPIから取得）
+const newsItems: NewsItem[] = [
+  {
+    id: 1,
+    date: "2024.08.20",
+    title: "TOEIC900でも、英語会議では沈黙してしまうあなたへ",
+    excerpt:
+      "外資系企業で成果を出したい。でも『英語で即答できない自分』が、キャリアのブレーキになっていませんか？",
+    category: "Day1 LP",
+    image: "/lp1-toeic900-silence.jpg",
+  },
+  {
+    id: 2,
+    date: "2024.08.10",
+    title: "新講師陣紹介：グローバル企業出身のプロフェッショナル",
+    excerpt:
+      "世界的な企業での豊富な経験を持つ新しい講師陣が加わりました。実践的なビジネス英語をお教えします。",
+    category: "講師紹介",
+    image: "/news-02.jpg",
+  },
+  {
+    id: 3,
+    date: "2024.08.05",
+    title: "670→905、B2達成。半導体エンジニアが12週間で変わった軌跡。",
+    excerpt:
+      "半導体エンジニアが12週間の集中コーチングでTOEIC 670→905、VERSANT B2を達成。会議での即応力向上の実証データを公開。",
+    category: "実績",
+    image: "/news-03.jpg",
+  },
+  // 他の記事データは省略
+];
 
-  // 記事データ（実際のプロジェクトではAPIから取得）
-  const newsItems: NewsItem[] = [
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const id = parseInt(resolvedParams.id);
+  const article = newsItems.find((item) => item.id === id);
+  
+  if (!article) {
+    return {
+      title: '記事が見つかりません | Utah Study Support',
+      description: 'お探しの記事が見つかりませんでした。',
+    };
+  }
+
+  return {
+    title: `${article.title} | Utah Study Support`,
+    description: article.excerpt,
+    keywords: ['Utah Study Support', 'ユタ州留学', article.category, '留学ニュース', '英語学習'],
+    openGraph: {
+      title: `${article.title} | Utah Study Support`,
+      description: article.excerpt,
+      type: 'article',
+      url: `https://utah-study-support.com/topics/${id}`,
+      images: [
+        {
+          url: article.image,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+      publishedTime: article.date.replace(/\./g, '-'),
+      section: article.category,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${article.title} | Utah Study Support`,
+      description: article.excerpt,
+      images: [article.image],
+    },
+    alternates: {
+      canonical: `/topics/${id}`,
+    },
+  };
+}
+
+export default async function TopicDetail({ params }: Props) {
+  const resolvedParams = await params;
+  const id = parseInt(resolvedParams.id);
+
+  // 全記事データ（実際のプロジェクトではAPIから取得）
+  const allNewsItems: NewsItem[] = [
     {
       id: 1,
       date: "2024.08.20",
@@ -516,97 +595,16 @@ export default function TopicDetail() {
     },
   ];
 
-  useEffect(() => {
-    const articleId = parseInt(params.id as string);
-    const foundArticle = newsItems.find((item) => item.id === articleId);
-
-    if (foundArticle) {
-      setArticle(foundArticle);
-    } else {
-      // 記事が見つからない場合は404ページにリダイレクト
-      router.push("/topics");
-    }
-    setLoading(false);
-  }, [params.id, router]);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">読み込み中...</p>
-        </div>
-      </div>
-    );
-  }
+  const article = allNewsItems.find((item) => item.id === id);
 
   if (!article) {
-    return null;
+    notFound();
   }
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold">
-                <span className="text-black">Utah Study Support</span>
-              </Link>
-            </div>
-
-            <nav className="hidden lg:flex items-center space-x-6">
-              <Link
-                href="/about"
-                className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-              >
-                Utah Study Supportとは
-              </Link>
-              <Link
-                href="/courses"
-                className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-              >
-                コース・料金
-              </Link>
-              <Link
-                href="/topics"
-                className="text-orange-500 hover:text-orange-600 text-sm font-medium"
-              >
-                トピックス
-              </Link>
-              <Link
-                href="/testimonials"
-                className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-              >
-                利用者の声
-              </Link>
-              <Link
-                href="/schools"
-                className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-              >
-                スクールを探す
-              </Link>
-              <Link
-                href="/qa"
-                className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-              >
-                Q&A
-              </Link>
-              <Link
-                href="/company"
-                className="text-gray-600 hover:text-gray-900 text-sm font-medium"
-              >
-                会社情報
-              </Link>
-            </nav>
-
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 font-medium text-sm">
-              無料カウンセリング
-            </button>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="/topics" />
+      <Breadcrumb />
 
       <main>
         {/* Article Header */}

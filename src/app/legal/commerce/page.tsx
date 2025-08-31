@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Header from "../../../components/Header";
+import Breadcrumb from "../../../components/Breadcrumb";
 import Footer from "../../../components/Footer";
 
 export default function CommercePage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <Breadcrumb />
 
       <main className="max-w-4xl mx-auto px-6 py-12">
         <div className="mb-8">

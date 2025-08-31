@@ -38,25 +38,36 @@ export default function FinalCTASection() {
         </motion.p>
         
         <motion.div
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           initial={{ y: 50, opacity: 0, scale: 0.9 }}
           animate={isInView ? { y: 0, opacity: 1, scale: 1 } : { y: 50, opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <Link 
-            href="/counseling" 
+          <motion.a 
+            href="https://line.me/R/ti/p/@your-line-id" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="inline-block bg-blue-600 text-white px-10 py-3 rounded-full hover:bg-blue-700 text-lg font-bold"
+            whileHover={{ 
+              scale: 1.05,
+              transition: { duration: 0.2 }
+            }}
+            whileTap={{ scale: 0.95 }}
           >
-            <motion.span
-              className="block"
-              whileHover={{ 
-                scale: 1.05,
-                transition: { duration: 0.2 }
-              }}
-              whileTap={{ scale: 0.95 }}
+            無料カウンセリングに申し込む
+          </motion.a>
+          
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Link
+              href="/about"
+              className="inline-block border-2 border-white text-white px-10 py-3 rounded-full hover:bg-white hover:text-orange-500 text-lg font-bold transition-colors"
             >
-              無料カウンセリングに申し込む
-            </motion.span>
-          </Link>
+              サービス詳細を見る
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>

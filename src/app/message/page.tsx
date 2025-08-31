@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Header from "../../components/Header";
+import Breadcrumb from "../../components/Breadcrumb";
 import Footer from "../../components/Footer";
 
 export default function MessagePage() {
@@ -84,13 +85,13 @@ export default function MessagePage() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in-up');
-            entry.target.style.opacity = '1';
+            (entry.target as HTMLElement).style.opacity = '1';
             
             const cards = entry.target.querySelectorAll('.card-hover');
             cards.forEach((card, index) => {
               setTimeout(() => {
-                card.style.transform = 'translateY(0)';
-                card.style.opacity = '1';
+                (card as HTMLElement).style.transform = 'translateY(0)';
+                (card as HTMLElement).style.opacity = '1';
               }, index * 200);
             });
           }
@@ -201,6 +202,7 @@ export default function MessagePage() {
         }
       `}</style>
       <Header />
+      <Breadcrumb />
 
       <main>
         {/* Hero Section */}
@@ -334,9 +336,15 @@ export default function MessagePage() {
                 <p className="text-lg mb-8 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                   あなたの英語学習の課題を分析し、最適な学習プランをご提案いたします。
                 </p>
-                <button className="bg-orange-500 text-white px-10 py-3 rounded-full hover:bg-orange-600 text-lg font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+                <a 
+                  href="https://line.me/R/ti/p/@your-line-id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-orange-500 text-white px-10 py-3 rounded-full hover:bg-orange-600 text-lg font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up text-center" 
+                  style={{animationDelay: '0.4s'}}
+                >
                   無料カウンセリングに申し込む
-                </button>
+                </a>
               </div>
             </div>
           </div>

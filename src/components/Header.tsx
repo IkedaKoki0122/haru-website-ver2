@@ -15,7 +15,7 @@ function Header({ currentPage }: HeaderProps) {
   const navigationItems = useMemo(() => [
     { href: "/about", label: "Utah Study Supportとは" },
     { href: "/courses", label: "コース・料金" },
-    { href: "/topics", label: "トピックス" },
+    { href: "/topics", label: "お役立ちブログ" },
     { href: "/testimonials", label: "利用者の声" },
     { href: "/schools", label: "スクールを探す" },
     { href: "/qa", label: "Q&A" },
@@ -150,9 +150,9 @@ function Header({ currentPage }: HeaderProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href="/counseling" className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 font-medium text-sm hidden lg:block transition-colors">
+              <a href="https://line.me/R/ti/p/@your-line-id" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 font-medium text-sm hidden lg:block transition-colors">
                 無料カウンセリング
-              </Link>
+              </a>
             </motion.div>
             
             <motion.button 
@@ -251,9 +251,9 @@ function Header({ currentPage }: HeaderProps) {
                     ease: [0.25, 0.1, 0.25, 1]
                   }}
                 >
-                  <Link href="/counseling" className="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 font-medium text-base w-full mt-4 text-center transition-colors">
+                  <a href="https://line.me/R/ti/p/@your-line-id" target="_blank" rel="noopener noreferrer" className="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 font-medium text-base w-full mt-4 text-center transition-colors">
                     無料カウンセリング
-                  </Link>
+                  </a>
                 </motion.div>
               </motion.div>
             </motion.nav>
