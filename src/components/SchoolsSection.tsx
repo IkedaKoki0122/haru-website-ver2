@@ -10,13 +10,23 @@ export default function SchoolsSection() {
 
   const apartments = [
     { 
+      name: "Glenwood Student Living", 
+      location: "Provo",
+      address: "1565 N University Ave, Provo, UT 84604",
+      phone: "",
+      hours: "$450〜/月",
+      access: "BYUまで徒歩圏内",
+      features: ["家具付き", "スマートTV", "高速インターネット", "24時間スタディルーム", "ジム", "プール・スパ", "駐車場$35〜"],
+      image: "/Glenwood.jpeg"
+    },
+    { 
       name: "Cinnamon Tree Apartments", 
       location: "Provo",
-      address: "1234 Elm Street, Salt Lake City, UT 84101",
+      address: "1285 N Freedom Blvd, Provo, UT 84604",
       phone: "",
-      hours: "月額 $850",
-      access: "キャンパスまで徒歩15分",
-      features: ["1ベッドルーム", "家具付き", "Wi-Fi完備", "ランドリー設備", "駐車場あり", "ジム併設"],
+      hours: "3BR/2BA $385 (6人シェア)、2BR/1BA $430 (4人)、2BR/2BA $460 (4人)",
+      access: "年中契約対応",
+      features: ["ガス・電気実費負担", "インターネット $20/月", "保証金 $600", "築1966年・2階建・65戸"],
       image: "/CinnamonTreeApartments.webp"
     },
     { 
@@ -38,6 +48,16 @@ export default function SchoolsSection() {
       access: "キャンパスまでバス20分",
       features: ["1ベッドルーム", "モダンなデザイン", "Wi-Fi完備", "屋上テラス", "ペット可"],
       image: "/raintree.webp"
+    },
+    { 
+      name: "Stadium 150", 
+      location: "Provo",
+      address: "1960 N Canyon Rd, Provo, UT 84604",
+      phone: "",
+      hours: "シェア $415〜/月、個室 $690〜/月",
+      access: "12か月契約",
+      features: ["2BR/1BA", "3BR/1.5-2BA", "4BR/2BA", "ユーティリティ $82/月", "申込$50", "保証金$150", "ペット不可"],
+      image: "/Studium.jpg"
     }
   ];
 
