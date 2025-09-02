@@ -25,7 +25,7 @@ export default function FinalCTASection() {
           animate={isInView ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          本気で英語を身につけたい方へ
+          ユタ州で理想の留学生活を実現しませんか？
         </motion.h2>
         
         <motion.p 
@@ -34,7 +34,7 @@ export default function FinalCTASection() {
           animate={isInView ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          まずは無料カウンセリングで、あなたの課題を見つけてみませんか？
+          ユタ州専門カウンセラーがあなたの留学プランを無料でサポートします
         </motion.p>
         
         <motion.div

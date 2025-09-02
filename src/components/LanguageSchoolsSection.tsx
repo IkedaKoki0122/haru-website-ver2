@@ -37,6 +37,16 @@ export default function LanguageSchoolsSection() {
       access: "BYUキャンパス内",
       features: ["BYUキャンパス内での学習", "少人数制クラス", "大学施設の利用可能", "アクティビティプログラム", "大学進学準備コース", "I-20発行", "世界中からの留学生と交流"],
       image: "/BYUELC.webp"
+    },
+    { 
+      name: "Lumos Language School", 
+      location: "Orem",
+      address: "930 S State St, Orem, UT 84097",
+      phone: "+1 801-265-2345",
+      hours: "初回学期：$2,100、継続：$1,800",
+      access: "オレム市内",
+      features: ["CEA認定校", "F-1ビザサポート", "7レベルCEFRカリキュラム", "集中英語プログラム", "TOEFL対策コース", "フレキシブルなスケジュール"],
+      image: "/lumos.jpg"
     }
   ];
 
@@ -160,6 +170,12 @@ export default function LanguageSchoolsSection() {
                 <div className="text-sm font-medium text-gray-700 mb-1">所在地</div>
                 <div className="text-sm text-gray-600">{selectedSchool.address}</div>
               </div>
+              {selectedSchool.phone && (
+                <div>
+                  <div className="text-sm font-medium text-gray-700 mb-1">電話番号</div>
+                  <div className="text-sm text-gray-600">{selectedSchool.phone}</div>
+                </div>
+              )}
             </div>
             <div>
               <div className="text-sm font-medium text-gray-700 mb-1">学費</div>

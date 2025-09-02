@@ -10,6 +10,17 @@ export default function SchoolsSection() {
 
   const apartments = [
     { 
+      name: "Alta Apartments", 
+      location: "Provo",
+      address: "1850 N University Ave, Provo, UT 84604",
+      phone: "",
+      hours: "レギュラー: $415/月、アップグレード: $440/月",
+      access: "ユーティリティ定額: $60/月、駐車場: $240/年",
+      features: ["申込料: $50", "保証金: 家賃相当額（$115は不返金）", "入居前支払い: 初月+最終月家賃", "学期・空室状況で価格変動あり"],
+      image: "/Alta.jpg",
+      website: "https://altaapartments.com"
+    },
+    { 
       name: "Glenwood Student Living", 
       location: "Provo",
       address: "1565 N University Ave, Provo, UT 84604",
@@ -24,7 +35,7 @@ export default function SchoolsSection() {
       location: "Provo",
       address: "1285 N Freedom Blvd, Provo, UT 84604",
       phone: "",
-      hours: "3BR/2BA $385 (6人シェア)、2BR/1BA $430 (4人)、2BR/2BA $460 (4人)",
+      hours: "3ベッドルーム/2バスルーム：$385/月（6人シェア）、2ベッドルーム/1バスルーム：$430/月（4人）、2ベッドルーム/2バスルーム：$460/月（4人）",
       access: "年中契約対応",
       features: ["ガス・電気実費負担", "インターネット $20/月", "保証金 $600", "築1966年・2階建・65戸"],
       image: "/CinnamonTreeApartments.webp"
@@ -40,13 +51,13 @@ export default function SchoolsSection() {
       image: "/Alpinevillage.webp"
     },
     { 
-      name: "Rain Tree Apartments", 
+      name: "Raintree Apartments", 
       location: "Provo",
-      address: "890 Main Street, Salt Lake City, UT 84111",
+      address: "1849 N Freedom Blvd, Provo, UT 84604",
       phone: "",
-      hours: "月額 $950",
-      access: "キャンパスまでバス20分",
-      features: ["1ベッドルーム", "モダンなデザイン", "Wi-Fi完備", "屋上テラス", "ペット可"],
+      hours: "シェア $475/月、個室 $740/月",
+      access: "学期スケジュール運営",
+      features: ["家具付き", "高速インターネット", "プール", "学期契約対応"],
       image: "/raintree.webp"
     },
     { 
@@ -204,26 +215,32 @@ export default function SchoolsSection() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col gap-4">
               <motion.button 
-                className="flex-1 bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 font-medium text-sm"
+                className="w-full bg-orange-500 text-white py-3 px-8 rounded-md hover:bg-orange-600 font-medium text-sm"
                 whileHover={{ scale: 1.02, backgroundColor: "#ea580c" }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
               >
-                Utah Study Supportに相談する
+                <span className="hidden md:inline">このアパートについてUtah Study Supportに相談する</span>
+                <span className="md:hidden">Utah Study Supportに相談する</span>
               </motion.button>
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Link
-                  href="/contact"
-                  className="flex-1 block text-center border-2 border-orange-500 text-orange-500 py-3 rounded-md hover:bg-orange-500 hover:text-white font-medium text-sm transition-colors"
+              {selectedApartment.website && (
+                <motion.a 
+                  href={selectedApartment.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 text-white py-3 px-8 rounded-md hover:bg-blue-700 font-medium text-sm inline-flex items-center"
+                  whileHover={{ scale: 1.02, backgroundColor: "#1d4ed8" }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  詳細問い合わせ
-                </Link>
-              </motion.div>
+                  公式サイトで詳細を確認
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </motion.a>
+              )}
             </div>
           </div>
         </motion.div>

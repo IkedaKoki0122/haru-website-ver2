@@ -11,7 +11,6 @@ import NewsSection from "../components/NewsSection";
 import FinalCTASection from "../components/FinalCTASection";
 import LanguageSchoolsSection from "../components/LanguageSchoolsSection";
 import PlanSelectionSection from "../components/PlanSelectionSection";
-import ApartmentsSection from "../components/ApartmentsSection";
 
 export const metadata: Metadata = {
   title: 'Utah Study Support | ユタ州留学・語学学校サポート',
@@ -88,7 +87,6 @@ export default function Home() {
         <PlanSelectionSection />
         <LanguageSchoolsSection />
         <SchoolsSection />
-        <ApartmentsSection />
         <NewsSection />
         <FinalCTASection />
       </main>
