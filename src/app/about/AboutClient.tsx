@@ -71,7 +71,7 @@ export default function AboutClient() {
               className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto"
               variants={itemVariants}
             >
-              短期集中で英語力を確実に身につけるコーチングサービス
+              ユタ州専門の留学斡旋サービスで、あなたの海外留学を完全サポート
             </motion.p>
           </div>
         </motion.div>
@@ -101,9 +101,9 @@ export default function AboutClient() {
             >
               Utah Study Supportは「世界で活躍する日本人を増やす」をミッションに掲げ、
               <br />
-              短期集中で英語力を確実に身につけるコーチングサービスを提供しています。
+              ユタ州の優れた教育環境と豊かな自然を活かした留学体験を提供しています。
               <br />
-              従来の英語学習の常識を覆し、科学的なアプローチで効率的な学習を実現します。
+              学校選びから現地サポートまで、お客様一人ひとりに寄り添った総合的な留学支援を実現します。
             </motion.p>
           </div>
         </motion.div>
@@ -148,11 +148,11 @@ export default function AboutClient() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                科学的カリキュラム
+                学校選定サポート
               </h3>
               <p className="text-gray-600 leading-relaxed text-center">
-                応用言語学の理論に基づいた科学的アプローチで、効率的な英語習得を実現します。
-                一人ひとりの課題を明確にし、最適な学習法をご提案いたします。
+                ユタ州の優良語学学校・大学との強固なネットワークを活かし、
+                あなたの目標と予算に最適な教育機関をご提案いたします。
               </p>
             </motion.div>
             <motion.div 
@@ -169,11 +169,11 @@ export default function AboutClient() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                専属コンサルタント
+                現地生活サポート
               </h3>
               <p className="text-gray-600 leading-relaxed text-center">
-                英語学習のプロフェッショナルが、受講生一人ひとりに寄り添い、
-                専用のカリキュラムで学習進捗を徹底的に管理・サポートします。
+                住居手配から空港ピックアップ、銀行口座開設まで、
+                ユタ州での新生活に必要な手続きを専門スタッフが全面サポートします。
               </p>
             </motion.div>
             <motion.div 
@@ -190,11 +190,11 @@ export default function AboutClient() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                継続サポート
+                24時間緊急対応
               </h3>
               <p className="text-gray-600 leading-relaxed text-center">
-                毎日の学習管理から週次面談まで、挫折しない仕組みで学習継続をサポート。
-                習慣化まで徹底的にサポートします。
+                留学期間中の緊急事態やトラブルに24時間対応。
+                現地スタッフとの連携で、安心・安全な留学生活をサポートします。
               </p>
             </motion.div>
           </motion.div>
@@ -206,13 +206,13 @@ export default function AboutClient() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Utah Study Supportの学習メソッド
+              Utah Study Supportの留学サポートプロセス
             </h2>
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                科学的根拠に基づく学習設計
+                完全オーダーメイド留学プラン
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -220,9 +220,9 @@ export default function AboutClient() {
                     <span className="text-orange-600 font-bold text-sm">1</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">課題発見と分析</h4>
+                    <h4 className="font-bold text-gray-900 mb-2">留学目標のヒアリング</h4>
                     <p className="text-gray-600">
-                      科学的なテストで現在の英語力を詳細に分析し、課題を明確にします。
+                      あなたの将来ビジョン、予算、学習期間を詳しくお伺いし、最適な留学プランを設計します。
                     </p>
                   </div>
                 </div>
@@ -231,9 +231,9 @@ export default function AboutClient() {
                     <span className="text-orange-600 font-bold text-sm">2</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">オーダーメイド学習設計</h4>
+                    <h4 className="font-bold text-gray-900 mb-2">学校選定・手続きサポート</h4>
                     <p className="text-gray-600">
-                      分析結果に基づき、一人ひとりに最適化された学習カリキュラムを設計します。
+                      ユタ州の推薦学校から最適な教育機関を選定し、入学手続きを全面サポートします。
                     </p>
                   </div>
                 </div>
@@ -242,9 +242,9 @@ export default function AboutClient() {
                     <span className="text-orange-600 font-bold text-sm">3</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-2">継続的な進捗管理</h4>
+                    <h4 className="font-bold text-gray-900 mb-2">現地安心サポート</h4>
                     <p className="text-gray-600">
-                      専属コンサルタントが毎日の学習をチェックし、必要に応じて軌道修正を行います。
+                      入国から卒業まで、現地スタッフが継続的にサポート。学習相談や生活サポートを提供します。
                     </p>
                   </div>
                 </div>
@@ -258,12 +258,12 @@ export default function AboutClient() {
                   <span className="text-white text-4xl font-bold">3</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  3ヶ月集中プログラム
+                  留学成功率
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  短期集中だからこそ実現できる
+                  従来の留学代理店とは一味違う
                   <br />
-                  確実な英語力向上
+                  ユタ州特化の手厚いサポート
                 </p>
               </div>
             </div>
@@ -299,30 +299,30 @@ export default function AboutClient() {
               className="text-center bg-white p-8 rounded-lg shadow-sm"
               variants={cardVariants}
             >
-              <div className="text-4xl font-bold text-orange-500 mb-4">98%</div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">継続率</h3>
+              <div className="text-4xl font-bold text-orange-500 mb-4">95%</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">留学満足度</h3>
               <p className="text-gray-600">
-                専属コンサルタントによる徹底サポートで高い継続率を実現
+                ユタ州特化の手厚いサポートで高い満足度を実現
               </p>
             </motion.div>
             <motion.div 
               className="text-center bg-white p-8 rounded-lg shadow-sm"
               variants={cardVariants}
             >
-              <div className="text-4xl font-bold text-orange-500 mb-4">平均150点</div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">TOEIC®スコアアップ</h3>
+              <div className="text-4xl font-bold text-orange-500 mb-4">200+</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">提携学校数</h3>
               <p className="text-gray-600">
-                3ヶ月でTOEIC®スコア平均150点アップを実現
+                ユタ州内の優良な語学学校・大学との強固なパートナーシップ
               </p>
             </motion.div>
             <motion.div 
               className="text-center bg-white p-8 rounded-lg shadow-sm"
               variants={cardVariants}
             >
-              <div className="text-4xl font-bold text-orange-500 mb-4">10,000+</div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">受講生数</h3>
+              <div className="text-4xl font-bold text-orange-500 mb-4">1,500+</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">留学成功例</h3>
               <p className="text-gray-600">
-                これまで10,000名以上の受講生が英語力向上を実現
+                これまで1,500名以上の日本人留学生のユタ州留学をサポート
               </p>
             </motion.div>
           </motion.div>
@@ -344,13 +344,13 @@ export default function AboutClient() {
             className="text-3xl font-bold mb-6"
             variants={itemVariants}
           >
-            まずは無料カウンセリングでお試しください
+            ユタ州留学の第一歩を踏み出しましょう
           </motion.h2>
           <motion.p 
             className="text-lg mb-8 leading-relaxed"
             variants={itemVariants}
           >
-            あなたの英語学習の課題を分析し、最適な学習プランをご提案いたします。
+            ユタ州専門カウンセラーが、あなたに最適な留学プランを無料で提案いたします。
             <br />
             まずはお気軽にご相談ください。
           </motion.p>

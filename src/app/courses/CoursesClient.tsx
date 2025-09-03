@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { useMemo, memo, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import SchoolIcon from '@mui/icons-material/School';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 function CoursesClient() {
   const [loading, setLoading] = useState(false);
@@ -34,7 +37,7 @@ function CoursesClient() {
         'メールサポート',
         '基本教材提供'
       ],
-      icon: '/icon-basic.svg'
+      icon: SchoolIcon
     },
     {
       id: 'medium',
@@ -50,7 +53,7 @@ function CoursesClient() {
         '24時間LINE相談対応'
       ],
       popular: true,
-      icon: '/icon-medium.svg'
+      icon: RocketLaunchIcon
     },
     {
       id: 'premium',
@@ -68,7 +71,7 @@ function CoursesClient() {
         '渡米後の英会話コーチング',
         '渡米後一週間のサービス・買い物サポート'
       ],
-      icon: '/icon-premium.svg'
+      icon: WorkspacePremiumIcon
     }
   ], []);
 
@@ -130,13 +133,7 @@ function CoursesClient() {
               <div className={`bg-white p-6 ${course.popular ? 'pt-16' : ''}`}>
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                    <Image 
-                      src={course.icon} 
-                      alt={course.name}
-                      width={32}
-                      height={32}
-                      className="w-8 h-8"
-                    />
+                    <course.icon className="w-8 h-8 text-orange-500" />
                   </div>
                 </div>
                 

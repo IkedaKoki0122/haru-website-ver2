@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: 'ユタ州語学学校一覧 | Utah Study Support',
-  description: 'ユタ州プロボ市の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Centerなど、Utah Study Supportが完選した優良語学学校の特徴、料金、サービス内容を詳しく解説します。',
+  description: 'ユタ州の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Center、Lumos Language Schoolなど、Utah Study Supportが厳選した優良語学学校の特徴、料金、サービス内容を詳しく解説します。',
   keywords: ['Utah Study Support', 'ユタ州語学学校', 'UCEDA School', 'Internexus Provo', 'BYU English Language Center', 'プロボ語学学校', 'ユタ州留学'],
   openGraph: {
     title: 'ユタ州語学学校一覧 | Utah Study Support',
-    description: 'ユタ州プロボ市の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Centerなど、優良語学学校の特徴、料金、サービス内容を詳しく解説。',
+    description: 'ユタ州の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Center、Lumos Language Schoolなど、優良語学学校の特徴、料金、サービス内容を詳しく解説。',
     type: 'website',
     url: 'https://utah-study-support.com/schools',
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ユタ州語学学校一覧 | Utah Study Support',
-    description: 'ユタ州プロボ市の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Centerなど、優良語学学校の特徴、料金、サービス内容を詳しく解説。',
+    description: 'ユタ州の主要語学学校をご紹介。UCEDA School、Internexus Provo、BYU English Language Center、Lumos Language Schoolなど、優良語学学校の特徴、料金、サービス内容を詳しく解説。',
     images: ['/og-schools.jpg'],
   },
   alternates: {
@@ -41,7 +41,7 @@ const jsonLd = {
   url: 'https://utahstudysupport.com/schools',
   mainEntity: {
     '@type': 'ItemList',
-    numberOfItems: 3,
+    numberOfItems: 4,
     itemListElement: [
       {
         '@type': 'EducationalOrganization',
@@ -77,6 +77,20 @@ const jsonLd = {
           addressLocality: 'Provo',
           addressRegion: 'UT',
           postalCode: '84602',
+          addressCountry: 'US'
+        }
+      },
+      {
+        '@type': 'EducationalOrganization',
+        position: 4,
+        name: 'Lumos Language School',
+        description: 'CEA認定校でF-1ビザサポート完備。7レベルのCEFRカリキュラムと集中英語プログラムを提供。',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '930 S State St',
+          addressLocality: 'Orem',
+          addressRegion: 'UT',
+          postalCode: '84097',
           addressCountry: 'US'
         }
       }
@@ -115,6 +129,16 @@ export default function Schools() {
       access: "BYUキャンパス内",
       features: ["BYUキャンパス内での学習", "少人数制クラス", "大学施設の利用可能", "アクティビティプログラム", "大学進学準備コース", "I-20発行"],
       image: "/BYUELC.webp"
+    },
+    {
+      name: "Lumos Language School",
+      area: "ユタ州オレム",
+      address: "930 S State St, Orem, UT 84097",
+      phone: "+1 801-265-2345",
+      hours: "初回学期：$2,100、継続：$1,800",
+      access: "オレム市内",
+      features: ["CEA認定校", "F-1ビザサポート", "7レベルCEFRカリキュラム", "集中英語プログラム", "TOEFL対策コース", "フレキシブルなスケジュール"],
+      image: "/lumos.jpg"
     }
   ];
 
@@ -135,7 +159,7 @@ export default function Schools() {
             ユタ州語学学校一覧
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Utah Study Supportが厳選した、ユタ州プロボエリアの優良語学学校をご紹介。
+            Utah Study Supportが厳選した、ユタ州プロボ・オレムエリアの優良語学学校をご紹介。
             <br />
             質の高い英語教育と快適な生活環境で、あなたの留学目標達成を全力でサポートします。
           </p>
@@ -176,6 +200,12 @@ export default function Schools() {
                   <div className="text-sm font-medium text-gray-700 mb-1">学費・料金</div>
                   <div className="text-sm text-gray-600">{school.hours}</div>
                 </div>
+                {school.phone && (
+                  <div>
+                    <div className="text-sm font-medium text-gray-700 mb-1">電話番号</div>
+                    <div className="text-sm text-gray-600">{school.phone}</div>
+                  </div>
+                )}
               </div>
 
               <div className="mb-6">
@@ -195,9 +225,6 @@ export default function Schools() {
               <div className="flex gap-3">
                 <button className="flex-1 bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 font-medium text-sm">
                   Utah Study Supportに相談する
-                </button>
-                <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 font-medium text-sm">
-                  詳細
                 </button>
               </div>
             </div>

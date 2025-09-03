@@ -20,10 +20,10 @@ import {
  * - Stripeベストプラクティス準拠
  */
 export async function middleware(request: NextRequest) {
-  // クライアントIDの取得（IP優先、フォールバック付き）
-  const clientId = request.ip || 
-    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+  // クライアントIDの取得（ヘッダーベースの実装）
+  const clientId = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
     request.headers.get('x-real-ip') || 
+    request.headers.get('cf-connecting-ip') || 
     'unknown';
   
   // API エンドポイントに対するレート制限

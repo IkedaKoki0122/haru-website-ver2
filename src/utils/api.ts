@@ -31,9 +31,9 @@ export async function apiRequest<T = any>(
     throw new Error('CSRF token is required for POST requests');
   }
 
-  const requestHeaders: HeadersInit = {
+  const requestHeaders: Record<string, string> = {
     'Content-Type': 'application/json',
-    ...headers,
+    ...(headers as Record<string, string>),
   };
 
   // CSRFトークンをヘッダーに追加

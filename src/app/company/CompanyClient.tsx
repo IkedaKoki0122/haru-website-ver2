@@ -103,7 +103,7 @@ export default function CompanyClient() {
                     開業
                   </div>
                   <div className="text-sm text-gray-900">
-                    2016年9月
+                    2025年9月2日
                   </div>
                 </div>
                 <div className="flex border-b border-gray-200 pb-4">
@@ -178,7 +178,7 @@ export default function CompanyClient() {
               >
                 <div className="flex">
                   <div className="w-20 text-sm font-medium text-orange-500 flex-shrink-0">
-                    2016年
+                    2025年
                   </div>
                   <div className="text-sm text-gray-900">
                     Utah Study Support開業<br />

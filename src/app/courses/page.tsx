@@ -9,7 +9,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Utah Study Support - ユタ州留学サポートサービス',
-  description: '学校選びから住居手配、現地サポートまで、ユタ州留学をトータルサポート。業界最安値¥79,800でプロフェッショナルな留学支援を提供します。',
+  description: '学校選びから住居手配、現地サポートまで、ユタ州留学をトータルサポート。業界最安値¥49,800〜でプロフェッショナルな留学支援を提供します。',
   provider: {
     '@type': 'Organization',
     name: 'Utah Study Support',
@@ -19,7 +19,7 @@ const jsonLd = {
     {
       '@type': 'Offer',
       name: '基本サポートプラン',
-      price: '79800',
+      price: '49800',
       priceCurrency: 'JPY',
       description: '語学学校選び、住居手配、現地サポートまでの基本的な留学支援サービス'
     }
@@ -31,7 +31,7 @@ const jsonLd = {
 
 export const metadata: Metadata = {
   title: 'サービス・料金 | Utah Study Support - ユタ州留学サポート',
-  description: 'Utah Study Supportの留学サポートサービスと料金をご紹介。学校選びから住居手配、現地サポートまで、ユタ州留学をトータルサポート。業界最安値¥79,800でプロフェッショナルな留学支援を提供します。',
+  description: 'Utah Study Supportの留学サポートサービスと料金をご紹介。学校選びから住居手配、現地サポートまで、ユタ州留学をトータルサポート。業界最安値¥49,800〜でプロフェッショナルな留学支援を提供します。',
   keywords: ['ユタ州留学', '留学サポート', '語学学校', '住居手配', '現地サポート', 'Utah Study Support', '留学斡旋', 'プロボ'],
   openGraph: {
     title: 'サービス・料金 | Utah Study Support - ユタ州留学サポート',

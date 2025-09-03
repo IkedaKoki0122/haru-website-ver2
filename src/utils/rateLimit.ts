@@ -98,7 +98,7 @@ function getClientIP(request: NextRequest): string {
   if (forwardedFor) return forwardedFor.split(',')[0].trim();
   
   // フォールバック（開発環境等）
-  return request.ip || '127.0.0.1';
+  return '127.0.0.1';
 }
 
 /**

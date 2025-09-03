@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useMemo, useCallback, memo, useRef, useEffect } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 
 interface School {
   id: string;
@@ -61,7 +61,7 @@ function CoursesSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -72,7 +72,7 @@ function CoursesSection() {
     }
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { 
       y: 60, 
       opacity: 0,
@@ -84,7 +84,7 @@ function CoursesSection() {
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: "easeOut"
       }
     }
   };
@@ -96,7 +96,7 @@ function CoursesSection() {
           className="text-center mb-12"
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             提携語学学校紹介
@@ -158,7 +158,7 @@ function CoursesSection() {
           className="text-center mt-12"
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
           <p className="text-gray-600 mb-6">
             学校選びでお悩みですか？専門スタッフが無料でご相談をお受けします。

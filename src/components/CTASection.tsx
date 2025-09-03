@@ -37,7 +37,7 @@ const CTASection: FC = () => {
             className="text-center text-white px-6"
             initial={{ y: 80, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : { y: 80, opacity: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           >
             <motion.h2 
               className="text-2xl font-bold mb-3"

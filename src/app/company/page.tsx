@@ -8,11 +8,11 @@ import CompanyClient from "./CompanyClient";
 
 export const metadata: Metadata = {
   title: '会社概要 | Utah Study Support',
-  description: 'Utah Study Supportの会社概要。岡田祥吾が代表を務める個人事業として2016年に設立。ユタ州専門の留学斡旋サービスで、語学学校選びから現地サポートまで幅広くサービスを提供しています。',
+  description: 'Utah Study Supportの会社概要。岡田祥吾が代表を務める個人事業として2025年に設立。ユタ州専門の留学斡旋サービスで、語学学校選びから現地サポートまで幅広くサービスを提供しています。',
   keywords: ['Utah Study Support', '会社概要', '岡田祥吾', 'ユタ州留学', '個人事業', '留学斡旋'],
   openGraph: {
     title: '会社概要 | Utah Study Support',
-    description: 'Utah Study Supportの会社概要。岡田祥吾が代表を務める個人事業として2016年に設立。ユタ州専門の留学斡旋サービスを提供。',
+    description: 'Utah Study Supportの会社概要。岡田祥吾が代表を務める個人事業として2025年に設立。ユタ州専門の留学斡旋サービスを提供。',
     type: 'website',
     url: 'https://utah-study-support.com/company',
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '会社概要 | Utah Study Support',
-    description: 'Utah Study Supportの会社概要。岡田祥吾が代表を務める個人事業として2016年に設立。ユタ州専門の留学斡旋サービスを提供。',
+    description: 'Utah Study Supportの会社概要。岡田祥吾が代表を務める個人事業として2025年に設立。ユタ州専門の留学斡旋サービスを提供。',
     images: ['/og-company.jpg'],
   },
   alternates: {
@@ -41,7 +41,7 @@ const jsonLd = {
   name: 'Utah Study Support',
   alternateName: '岡田祥吾',
   founder: '岡田祥吾',
-  foundingDate: '2016-09',
+  foundingDate: '2025-09-02',
   description: 'ユタ州専門の留学斡旋個人事業として、語学学校選びから住居手配、現地生活サポートまで、ワンストップで留学生活をトータルサポートします。',
   url: 'https://utahstudysupport.com/company',
   address: {

@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -17,8 +17,7 @@ export default function SchoolsSection() {
       hours: "レギュラー: $415/月、アップグレード: $440/月",
       access: "ユーティリティ定額: $60/月、駐車場: $240/年",
       features: ["申込料: $50", "保証金: 家賃相当額（$115は不返金）", "入居前支払い: 初月+最終月家賃", "学期・空室状況で価格変動あり"],
-      image: "/Alta.jpg",
-      website: "https://altaapartments.com"
+      image: "/Alta.jpg"
     },
     { 
       name: "Glenwood Student Living", 
@@ -35,7 +34,7 @@ export default function SchoolsSection() {
       location: "Provo",
       address: "1285 N Freedom Blvd, Provo, UT 84604",
       phone: "",
-      hours: "3ベッドルーム/2バスルーム：$385/月（6人シェア）、2ベッドルーム/1バスルーム：$430/月（4人）、2ベッドルーム/2バスルーム：$460/月（4人）",
+      hours: "3ベッドルーム/2バスルーム：$385/月（6人シェア）\n2ベッドルーム/1バスルーム：$430/月（4人）\n2ベッドルーム/2バスルーム：$460/月（4人）",
       access: "年中契約対応",
       features: ["ガス・電気実費負担", "インターネット $20/月", "保証金 $600", "築1966年・2階建・65戸"],
       image: "/CinnamonTreeApartments.webp"
@@ -74,7 +73,7 @@ export default function SchoolsSection() {
 
   const [selectedApartment, setSelectedApartment] = useState(apartments[0]);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -85,7 +84,7 @@ export default function SchoolsSection() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { 
       y: 30, 
       opacity: 0,
@@ -97,7 +96,7 @@ export default function SchoolsSection() {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: "easeOut"
       }
     }
   };
@@ -110,7 +109,7 @@ export default function SchoolsSection() {
           className="text-center mb-12"
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             提携アパート紹介
@@ -121,8 +120,9 @@ export default function SchoolsSection() {
           </p>
         </motion.div>
         
+        {/* Desktop Grid Layout */}
         <motion.div 
-          className="grid md:grid-cols-3 gap-4 text-center mb-8"
+          className="hidden md:grid md:grid-cols-3 gap-4 text-center mb-8"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -157,6 +157,35 @@ export default function SchoolsSection() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Mobile Slider Layout */}
+        <div className="md:hidden mb-8">
+          <div className="flex gap-3 overflow-x-auto pb-4 px-1">
+            {apartments.map((apartment, index) => (
+              <motion.div 
+                key={index}
+                className={`flex-shrink-0 w-40 p-3 border rounded-lg cursor-pointer transition-all duration-300 ${
+                  selectedApartment.name === apartment.name 
+                    ? "border-orange-500 bg-orange-50 shadow-md" 
+                    : "border-gray-100 hover:border-orange-200 hover:shadow-sm"
+                }`}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSelectedApartment(apartment)}
+              >
+                <div 
+                  className={`font-medium text-sm text-center ${
+                    selectedApartment.name === apartment.name ? "text-orange-600" : "text-gray-900"
+                  }`}
+                >
+                  {apartment.name}
+                </div>
+                <div className="text-xs text-gray-600 text-center">
+                  {apartment.location}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
         {/* Apartment Details */}
         <motion.div 
@@ -197,7 +226,7 @@ export default function SchoolsSection() {
               </div>
               <div>
                 <div className="text-sm font-medium text-gray-700 mb-1">家賃</div>
-                <div className="text-sm text-gray-600">{selectedApartment.hours}</div>
+                <div className="text-sm text-gray-600 whitespace-pre-line">{selectedApartment.hours}</div>
               </div>
             </div>
 
@@ -216,31 +245,18 @@ export default function SchoolsSection() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <motion.button 
-                className="w-full bg-orange-500 text-white py-3 px-8 rounded-md hover:bg-orange-600 font-medium text-sm"
+              <motion.a 
+                href="https://line.me/R/ti/p/@your-line-id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-orange-500 text-white py-3 px-8 rounded-md hover:bg-orange-600 font-medium text-sm text-center block"
                 whileHover={{ scale: 1.02, backgroundColor: "#ea580c" }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
               >
                 <span className="hidden md:inline">このアパートについてUtah Study Supportに相談する</span>
                 <span className="md:hidden">Utah Study Supportに相談する</span>
-              </motion.button>
-              {selectedApartment.website && (
-                <motion.a 
-                  href={selectedApartment.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 text-white py-3 px-8 rounded-md hover:bg-blue-700 font-medium text-sm inline-flex items-center"
-                  whileHover={{ scale: 1.02, backgroundColor: "#1d4ed8" }}
-                  whileTap={{ scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  公式サイトで詳細を確認
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </motion.a>
-              )}
+              </motion.a>
             </div>
           </div>
         </motion.div>

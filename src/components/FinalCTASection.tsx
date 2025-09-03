@@ -23,7 +23,7 @@ export default function FinalCTASection() {
           className="text-3xl font-bold mb-4"
           initial={{ y: 60, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           ユタ州で理想の留学生活を実現しませんか？
         </motion.h2>
@@ -32,7 +32,7 @@ export default function FinalCTASection() {
           className="text-lg mb-8"
           initial={{ y: 40, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
           ユタ州専門カウンセラーがあなたの留学プランを無料でサポートします
         </motion.p>
@@ -41,7 +41,7 @@ export default function FinalCTASection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           initial={{ y: 50, opacity: 0, scale: 0.9 }}
           animate={isInView ? { y: 0, opacity: 1, scale: 1 } : { y: 50, opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
         >
           <motion.a 
             href="https://line.me/R/ti/p/@your-line-id" 

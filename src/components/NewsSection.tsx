@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 
@@ -39,7 +39,7 @@ export default function NewsSection() {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -50,7 +50,7 @@ export default function NewsSection() {
     }
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { 
       y: 60, 
       opacity: 0,
@@ -62,7 +62,7 @@ export default function NewsSection() {
       scale: 1,
       transition: {
         duration: 0.7,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: "easeOut"
       }
     }
   };
@@ -74,7 +74,7 @@ export default function NewsSection() {
           className="text-center mb-12"
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             お役立ちブログ

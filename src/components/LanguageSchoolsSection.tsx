@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
@@ -46,13 +46,13 @@ export default function LanguageSchoolsSection() {
       hours: "初回学期：$2,100、継続：$1,800",
       access: "オレム市内",
       features: ["CEA認定校", "F-1ビザサポート", "7レベルCEFRカリキュラム", "集中英語プログラム", "TOEFL対策コース", "フレキシブルなスケジュール"],
-      image: "/lumos.jpg"
+      image: "/Lumos Language School.png"
     }
   ];
 
   const [selectedSchool, setSelectedSchool] = useState(schools[0]);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -63,7 +63,7 @@ export default function LanguageSchoolsSection() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { 
       y: 30, 
       opacity: 0,
@@ -75,7 +75,7 @@ export default function LanguageSchoolsSection() {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: "easeOut"
       }
     }
   };
@@ -88,7 +88,7 @@ export default function LanguageSchoolsSection() {
           className="text-center mb-12"
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             ユタ州プロボの提携語学学校
@@ -198,14 +198,17 @@ export default function LanguageSchoolsSection() {
           </div>
 
           <div className="flex gap-3">
-            <motion.button 
-              className="flex-1 bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 font-medium text-sm"
+            <motion.a 
+              href="https://line.me/R/ti/p/@your-line-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 font-medium text-sm text-center block"
               whileHover={{ scale: 1.02, backgroundColor: "#ea580c" }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
             >
               無料相談を予約する
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>

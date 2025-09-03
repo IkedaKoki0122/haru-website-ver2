@@ -114,22 +114,6 @@ export default function ContactClient() {
   if (submitted) {
     return (
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-white shadow-sm sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center">
-                <div className="text-2xl font-bold">
-                  <span className="text-black">Utah Study Support</span>
-                </div>
-              </div>
-              <a href="/" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-                ホームに戻る
-              </a>
-            </div>
-          </div>
-        </header>
-
         <main className="py-16">
           <div className="max-w-2xl mx-auto px-6 text-center">
             <div className="bg-green-50 border border-green-200 rounded-lg p-8">
@@ -286,22 +270,6 @@ export default function ContactClient() {
           box-shadow: 0 15px 35px rgba(249, 115, 22, 0.3);
         }
       `}</style>
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="text-2xl font-bold">
-                <span className="text-black">Utah Study Support</span>
-              </div>
-            </div>
-            <a href="/" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
-              ホームに戻る
-            </a>
-          </div>
-        </div>
-      </header>
-
       <main>
         {/* Hero Section */}
         <section ref={heroRef} className="bg-gray-50 py-16 overflow-hidden">

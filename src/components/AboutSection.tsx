@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
@@ -8,7 +8,7 @@ export default function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -19,14 +19,13 @@ export default function AboutSection() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 60, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1]
+        duration: 0.8
       }
     }
   };
@@ -62,10 +61,10 @@ export default function AboutSection() {
               </h3>
               <div className="text-center space-y-4">
                 <h4 className="text-2xl font-bold text-gray-800">業界最安値</h4>
-                <div className="text-6xl font-bold" style={{ color: '#FF6900' }}>¥79,800</div>
+                <div className="text-6xl font-bold" style={{ color: '#FF6900' }}>¥49,800〜</div>
                 <div className="text-lg text-black">
                   他社平均¥400,000と比較して
-                  <span className="block text-2xl text-black font-bold mt-2">¥320,200もお得！</span>
+                  <span className="block text-2xl text-black font-bold mt-2">¥350,200もお得！</span>
                 </div>
               </div>
             </div>

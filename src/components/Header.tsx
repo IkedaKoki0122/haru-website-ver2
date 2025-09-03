@@ -34,7 +34,7 @@ function Header({ currentPage }: HeaderProps) {
       className="bg-white shadow-sm sticky top-0 z-50"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-2 sm:px-4">
         <div className="flex items-center justify-between h-16">
@@ -105,7 +105,7 @@ function Header({ currentPage }: HeaderProps) {
                   transition={{ 
                     duration: 0.4, 
                     delay: 0.5 + index * 0.1,
-                    ease: [0.25, 0.1, 0.25, 1]
+                    ease: "easeOut"
                   }}
                 >
                   <Link
@@ -205,7 +205,7 @@ function Header({ currentPage }: HeaderProps) {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
             >
               <motion.div 
                 className="px-4 py-4 space-y-3"
@@ -224,7 +224,7 @@ function Header({ currentPage }: HeaderProps) {
                       transition={{ 
                         duration: 0.3, 
                         delay: index * 0.05,
-                        ease: [0.25, 0.1, 0.25, 1]
+                        ease: "easeOut"
                       }}
                     >
                       <Link
@@ -248,7 +248,7 @@ function Header({ currentPage }: HeaderProps) {
                   transition={{ 
                     duration: 0.3, 
                     delay: navigationItems.length * 0.05,
-                    ease: [0.25, 0.1, 0.25, 1]
+                    ease: "easeOut"
                   }}
                 >
                   <a href="https://line.me/R/ti/p/@your-line-id" target="_blank" rel="noopener noreferrer" className="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 font-medium text-base w-full mt-4 text-center transition-colors">
