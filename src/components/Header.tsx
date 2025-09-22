@@ -48,41 +48,13 @@ function Header({ currentPage }: HeaderProps) {
               <motion.div 
                 className="flex items-center"
                 whileHover={{ 
+                  scale: 1.05,
                   transition: { duration: 0.3 }
                 }}
               >
-                <div className="relative mr-3">
-                  <svg 
-                    width="32" 
-                    height="32" 
-                    viewBox="0 0 32 32" 
-                    className="text-orange-500 group-hover:text-orange-600 transition-colors duration-300"
-                  >
-                    <defs>
-                      <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#f97316" />
-                        <stop offset="100%" stopColor="#ea580c" />
-                      </linearGradient>
-                    </defs>
-                    <rect width="32" height="32" rx="8" fill="url(#logoGradient)" />
-                    <path 
-                      d="M8 12h12M8 16h8M8 20h10" 
-                      stroke="white" 
-                      strokeWidth="2" 
-                      strokeLinecap="round"
-                      className="group-hover:stroke-gray-100 transition-colors duration-300"
-                    />
-                    <circle cx="24" cy="12" r="2" fill="white" className="group-hover:fill-gray-100 transition-colors duration-300" />
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xl font-bold text-gray-900 leading-tight tracking-tight group-hover:text-gray-700 transition-colors duration-300">
-                    Utah Study Support
-                  </span>
-                  <span className="text-xs font-medium text-orange-500 uppercase tracking-wider">
-                    English Institute
-                  </span>
-                </div>
+                <span className="text-xl md:text-2xl font-black bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-clip-text text-transparent tracking-tight leading-tight drop-shadow-lg">
+                  Utah Study Support
+                </span>
               </motion.div>
             </Link>
           </motion.div>
