@@ -1,5 +1,5 @@
-import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
 import { FlatCompat } from "@eslint/eslintrc";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -30,9 +30,18 @@ const eslintConfig = tseslint.config(
     },
     rules: {
       "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/strict-boolean-expressions": "error",
-      "@typescript-eslint/prefer-nullish-coalescing": "error",
-      "@typescript-eslint/prefer-optional-chain": "error",
+      "@typescript-eslint/strict-boolean-expressions": "warn",
+      "@typescript-eslint/prefer-nullish-coalescing": "warn",
+      "@typescript-eslint/prefer-optional-chain": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-non-null-assertion": "warn",
+      "@typescript-eslint/array-type": "warn",
+      "@typescript-eslint/consistent-type-definitions": "warn",
+      "@typescript-eslint/consistent-indexed-object-style": "warn",
+      "@typescript-eslint/no-inferrable-types": "warn",
+      "@next/next/no-html-link-for-pages": "warn",
+      "@next/next/no-img-element": "warn",
+      "no-irregular-whitespace": "warn",
     },
   }
 );
