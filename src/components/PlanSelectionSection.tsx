@@ -50,7 +50,6 @@ function PlanSelectionSection() {
           "学校選び・出願サポート",
           "アパート紹介・契約代行",
           "空港送迎サービス",
-          "ビザ申請サポート",
           "24時間LINE相談対応",
         ],
         popular: true,
